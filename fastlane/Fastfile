@@ -1,0 +1,77 @@
+default_platform(:ios)
+
+APP_ID         = "com.alex.MorningGuard"
+MONITOR_EXT_ID = "com.alex.MorningGuard.MorningGuardExtension-MorningGuardExtension-MorningGuardExtension"
+SHIELD_EXT_ID  = "com.alex.MorningGuard.MorningGuardShield"
+TEAM_ID        = "42N6589XL7"
+
+# All three bundle IDs that need signing
+ALL_IDS = [APP_ID, MONITOR_EXT_ID, SHIELD_EXT_ID].freeze
+
+platform :ios do
+
+  # ── Signing ───────────────────────────────────────────────────────────────
+  # Run this once to sync/create certificates and profiles.
+  # STOP: requires your Apple ID, 2FA, and a private git repo for the certs.
+  lane :sync_signing do
+    match(
+      type:              "appstore",
+      app_identifier:    ALL_IDS,
+      team_id:           TEAM_ID,
+      readonly:          false     # set true after initial setup
+    )
+  end
+
+  lane :sync_signing_dev do
+    match(
+      type:              "development",
+      app_identifier:    ALL_IDS,
+      team_id:           TEAM_ID,
+      readonly:          false
+    )
+  end
+
+  # ── Build ─────────────────────────────────────────────────────────────────
+  # Archives MorningGuard for App Store distribution.
+  # Run sync_signing first so profiles are in place.
+  lane :build do
+    # Regenerate project from spec before archiving
+    sh("cd .. && xcodegen generate")
+
+    gym(
+      scheme:                    "MorningGuard",
+      project:                   "MorningGuard.xcodeproj",
+      configuration:             "Release",
+      export_method:             "app-store",
+      export_team_id:            TEAM_ID,
+      include_bitcode:           false,
+      output_directory:          "build",
+      output_name:               "MorningGuard.ipa",
+      xcargs:                    "CODE_SIGN_STYLE=Manual"
+    )
+  end
+
+  # ── Upload ────────────────────────────────────────────────────────────────
+  # Uploads the IPA to App Store Connect (TestFlight + review queue).
+  # STOP: requires ASC API key or Apple ID + app-specific password.
+  lane :upload do
+    deliver(
+      ipa:                       "build/MorningGuard.ipa",
+      app_identifier:            APP_ID,
+      team_id:                   TEAM_ID,
+      submit_for_review:         false,  # set true only when ready
+      automatic_release:         false,
+      force:                     true,   # skip HTML preview
+      skip_screenshots:          true,
+      skip_metadata:             true    # fill metadata manually in ASC first
+    )
+  end
+
+  # ── Combined release lane ─────────────────────────────────────────────────
+  lane :release do
+    sync_signing
+    build
+    upload
+  end
+
+end

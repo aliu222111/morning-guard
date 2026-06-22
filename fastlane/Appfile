@@ -1,0 +1,5 @@
+app_identifier("com.alex.MorningGuard")
+team_id("42N6589XL7")
+
+# Fill in your Apple ID below before running any lane that talks to ASC.
+# apple_id("your@apple.com")
