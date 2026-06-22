@@ -1,0 +1,30 @@
+{
+  "identifier" : "82E1E49D",
+  "nonConsumableProducts" : [
+    {
+      "displayPrice" : "2.99",
+      "familyShareable" : false,
+      "internalID" : "0E8EBD88",
+      "localizations" : [
+        {
+          "description" : "Unlock Morning Guard forever. No subscription, no ads.",
+          "displayName" : "Full Unlock",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.morningguard.MorningGuard.fullunlock",
+      "referenceName" : "fullunlock",
+      "type" : "NonConsumable"
+    }
+  ],
+  "products" : [
+
+  ],
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}

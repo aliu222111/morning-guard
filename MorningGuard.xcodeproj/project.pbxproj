@@ -16,9 +16,12 @@
 		39838EAEDDC02306160E4A1B /* MorningGuardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0330BD22B2E0AE54225793F /* MorningGuardApp.swift */; };
 		3DFCBBB321B80A35CB84D7A0 /* MorningGuardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB55BDAAD9F1749580CAD8 /* MorningGuardUITests.swift */; };
 		41278D220998DF81CE3632AD /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42993978A265440269330EE9 /* AppState.swift */; };
+		49EA12DD1BA0510ED324B6BC /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 58F8D3285385626C6BAF84B7 /* PrivacyInfo.xcprivacy */; };
 		5013F0B65671A019D28D5B1C /* FamilyControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF6E1B1BFE23A7F394439DF /* FamilyControls.framework */; };
 		53D4794DC6E1A0499F0DD0F7 /* ShieldConfigurationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F156255642C7F308A2003046 /* ShieldConfigurationExtension.swift */; };
 		871006D6B5FC19798D40E7D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC04609DE5D3A40C0470AA12 /* Assets.xcassets */; };
+		8D2E74B4A572DB7314498B10 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 58F8D3285385626C6BAF84B7 /* PrivacyInfo.xcprivacy */; };
+		8D9D545ED3E6B01E72E98417 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 58F8D3285385626C6BAF84B7 /* PrivacyInfo.xcprivacy */; };
 		97749590FB2673563D8B283A /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5BF375507AA45C1C348C4 /* NotificationService.swift */; };
 		9CB71067AF6E99DA3C078003 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC091F919A39A81DB01085A /* SettingsView.swift */; };
 		A35BF25DB4A0F5318A360BFC /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26F7B8A214D92CED4400BBB7 /* DeviceActivity.framework */; };
@@ -91,6 +94,7 @@
 		4C6C056AAB0CD28D22F13459 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		55B44AD55003A428962B525C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		564991B79F2BFB0B93DB6438 /* MorningGuardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningGuardUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		58F8D3285385626C6BAF84B7 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		7B8A456134914D12B205E142 /* ManagedSettingsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManagedSettingsUI.framework; path = System/Library/Frameworks/ManagedSettingsUI.framework; sourceTree = SDKROOT; };
 		8AF6E1B1BFE23A7F394439DF /* FamilyControls.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FamilyControls.framework; path = System/Library/Frameworks/FamilyControls.framework; sourceTree = SDKROOT; };
 		8DD5BF375507AA45C1C348C4 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
@@ -181,6 +185,7 @@
 				B0330BD22B2E0AE54225793F /* MorningGuardApp.swift */,
 				8DD5BF375507AA45C1C348C4 /* NotificationService.swift */,
 				4C6C056AAB0CD28D22F13459 /* OnboardingView.swift */,
+				58F8D3285385626C6BAF84B7 /* PrivacyInfo.xcprivacy */,
 				1EC091F919A39A81DB01085A /* SettingsView.swift */,
 			);
 			path = MorningGuard;
@@ -261,6 +266,7 @@
 			buildConfigurationList = 3B0677A3C799079D50493119 /* Build configuration list for PBXNativeTarget "MorningGuardShield" */;
 			buildPhases = (
 				401653B926745C094461F0DF /* Sources */,
+				0BA19316796C0DD4229FA8C1 /* Resources */,
 				8D3B0719BA7D46317F49E15E /* Frameworks */,
 			);
 			buildRules = (
@@ -297,6 +303,7 @@
 			buildConfigurationList = 22877244E75D48AC4EE06130 /* Build configuration list for PBXNativeTarget "MorningGuardExtension MorningGuardExtension MorningGuardExtension" */;
 			buildPhases = (
 				231B0490F60391E5C908EC1A /* Sources */,
+				996F00D0BFD0A5D880E55690 /* Resources */,
 				6DCF21BE6353AE0417BFDEF6 /* Frameworks */,
 			);
 			buildRules = (
@@ -382,11 +389,28 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0BA19316796C0DD4229FA8C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D9D545ED3E6B01E72E98417 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E880AE7FFB61220F3D34F35 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				871006D6B5FC19798D40E7D3 /* Assets.xcassets in Resources */,
+				49EA12DD1BA0510ED324B6BC /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		996F00D0BFD0A5D880E55690 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D2E74B4A572DB7314498B10 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
