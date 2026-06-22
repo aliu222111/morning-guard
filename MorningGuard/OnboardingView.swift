@@ -19,19 +19,19 @@ struct OnboardingView: View {
                     OnboardPage(
                         emoji: "🌅",
                         title: "Start your morning\nwithout the scroll.",
-                        body: "Morning Guard quietly protects the first hour of your day — no willpower required.",
+                        bodyText: "Morning Guard quietly protects the first hour of your day — no willpower required.",
                         tag: 0
                     )
                     OnboardPage(
                         emoji: "🔒",
                         title: "Your rules,\nyour apps.",
-                        body: "Choose exactly which social apps to block. Instagram, TikTok, X — your call.",
+                        bodyText: "Choose exactly which social apps to block. Instagram, TikTok, X — your call.",
                         tag: 1
                     )
                     OnboardPage(
                         emoji: "☀️",
                         title: "It lifts\nautomatically.",
-                        body: "When your morning window ends, guard lifts on its own. No friction, no guilt.",
+                        bodyText: "When your morning window ends, guard lifts on its own. No friction, no guilt.",
                         tag: 2
                     )
                 }
@@ -87,7 +87,7 @@ struct OnboardingView: View {
 struct OnboardPage: View {
     let emoji: String
     let title: String
-    let body: String
+    let bodyText: String
     let tag: Int
 
     var body: some View {
@@ -103,7 +103,7 @@ struct OnboardPage: View {
                 .multilineTextAlignment(.center)
                 .lineSpacing(4)
 
-            Text(body)
+            Text(bodyText)
                 .font(.body)
                 .foregroundStyle(Color("WarmTan"))
                 .multilineTextAlignment(.center)

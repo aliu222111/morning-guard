@@ -7,57 +7,74 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5FF5801A2F7B36200080011A /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF580192F7B36200080011A /* DeviceActivity.framework */; };
-		5FF580222F7B36200080011A /* MorningGuardExtension MorningGuardExtension MorningGuardExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5FF580172F7B36200080011A /* MorningGuardExtension MorningGuardExtension MorningGuardExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		5FF580312F7B95C80080011A /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF580302F7B95C80080011A /* ManagedSettings.framework */; };
-		5FF5803B2F7B95C80080011A /* MorningGuardShield.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5FF5802F2F7B95C80080011A /* MorningGuardShield.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		5FF580442F7BA5280080011A /* FamilyControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF580432F7BA5270080011A /* FamilyControls.framework */; };
-		5FF580472F7BA5340080011A /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF580452F7BA5340080011A /* ManagedSettings.framework */; };
-		5FF580482F7BA5340080011A /* ManagedSettingsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF580462F7BA5340080011A /* ManagedSettingsUI.framework */; };
-		5FF5804A2F7BA53D0080011A /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF580492F7BA53D0080011A /* DeviceActivity.framework */; };
-		5FF5804B2F7BA5610080011A /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF580452F7BA5340080011A /* ManagedSettings.framework */; };
+		017273C874BE95FACE6709A1 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6C056AAB0CD28D22F13459 /* OnboardingView.swift */; };
+		061160A23C6D9C34A9A26244 /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50DC86C7F1E9546E9949CBD /* ManagedSettings.framework */; };
+		0691DABC46A645CE32071804 /* Color+MorningGuard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46C240DE4D283974FD57A27 /* Color+MorningGuard.swift */; };
+		0D36986215691FA6A6B8606F /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50DC86C7F1E9546E9949CBD /* ManagedSettings.framework */; };
+		1D7ABE88E3D55218B558AF44 /* ManagedSettingsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8A456134914D12B205E142 /* ManagedSettingsUI.framework */; };
+		235E3774DED21F027B9D6CA6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B44AD55003A428962B525C /* ContentView.swift */; };
+		39838EAEDDC02306160E4A1B /* MorningGuardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0330BD22B2E0AE54225793F /* MorningGuardApp.swift */; };
+		3DFCBBB321B80A35CB84D7A0 /* MorningGuardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB55BDAAD9F1749580CAD8 /* MorningGuardUITests.swift */; };
+		41278D220998DF81CE3632AD /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42993978A265440269330EE9 /* AppState.swift */; };
+		5013F0B65671A019D28D5B1C /* FamilyControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF6E1B1BFE23A7F394439DF /* FamilyControls.framework */; };
+		53D4794DC6E1A0499F0DD0F7 /* ShieldConfigurationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F156255642C7F308A2003046 /* ShieldConfigurationExtension.swift */; };
+		871006D6B5FC19798D40E7D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC04609DE5D3A40C0470AA12 /* Assets.xcassets */; };
+		97749590FB2673563D8B283A /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5BF375507AA45C1C348C4 /* NotificationService.swift */; };
+		9CB71067AF6E99DA3C078003 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC091F919A39A81DB01085A /* SettingsView.swift */; };
+		A35BF25DB4A0F5318A360BFC /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26F7B8A214D92CED4400BBB7 /* DeviceActivity.framework */; };
+		A429C8C23004555631708579 /* GuardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412D4AC1B9A0E9ADB88231E /* GuardViewModel.swift */; };
+		A754581100C7EE7418DDD16B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6C25CB52B959E6049202FA /* HomeView.swift */; };
+		C9CC6E0CB4518843E1B1E11A /* MorningGuardMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC7EAB0DAC4FECC8180EC5 /* MorningGuardMonitor.swift */; };
+		E87E96F85AF37977B0C19DC8 /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50DC86C7F1E9546E9949CBD /* ManagedSettings.framework */; };
+		EC51F0002B196B8FA7D92B0F /* MorningGuardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564991B79F2BFB0B93DB6438 /* MorningGuardUITestsLaunchTests.swift */; };
+		EED35A627DCE21A9FCCC14CE /* GuardSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F90B805445AC5BD8410064 /* GuardSetupView.swift */; };
+		F02C2D9A2C935A1F023404BD /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26F7B8A214D92CED4400BBB7 /* DeviceActivity.framework */; };
+		F1D2CBE5CF69A9486DB81361 /* MorningGuardExtension MorningGuardExtension MorningGuardExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9B0DDEB24122FCCBBD177CDA /* MorningGuardExtension MorningGuardExtension MorningGuardExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F2E5C29BCF0123C298B95E0A /* MorningGuardShield.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8DF7D1FA8FDF40E46E7EFDFC /* MorningGuardShield.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F966922620CE41934B173B54 /* ManagedSettingsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8A456134914D12B205E142 /* ManagedSettingsUI.framework */; };
+		FB38AEB361AC9C03F693DCA0 /* MorningGuardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04898C4083FA5C816DF9016B /* MorningGuardTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5FF57FE32F7B2C8D0080011A /* PBXContainerItemProxy */ = {
+		1F26DF5233B1A4279AA68D51 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5FF57FCD2F7B2C8A0080011A /* Project object */;
+			containerPortal = 8E863610A43787F0655F96B4 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5FF57FD42F7B2C8A0080011A;
-			remoteInfo = MorningGuard;
-		};
-		5FF57FED2F7B2C8E0080011A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5FF57FCD2F7B2C8A0080011A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5FF57FD42F7B2C8A0080011A;
-			remoteInfo = MorningGuard;
-		};
-		5FF580202F7B36200080011A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5FF57FCD2F7B2C8A0080011A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5FF580162F7B36200080011A;
+			remoteGlobalIDString = E5B6D555155C9B09107071B2;
 			remoteInfo = "MorningGuardExtension MorningGuardExtension MorningGuardExtension";
 		};
-		5FF580392F7B95C80080011A /* PBXContainerItemProxy */ = {
+		5ED49A8BCB99ED568D8B2B78 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5FF57FCD2F7B2C8A0080011A /* Project object */;
+			containerPortal = 8E863610A43787F0655F96B4 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5FF5802E2F7B95C80080011A;
+			remoteGlobalIDString = 9D596A6BCB0BC3D4D1FE0C5D;
 			remoteInfo = MorningGuardShield;
+		};
+		D1D0CCF26F321ED6B39144B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E863610A43787F0655F96B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5E76A4FAE1ADB41855E99DAC;
+			remoteInfo = MorningGuard;
+		};
+		EE7113A6B09C23AE2EA2C809 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E863610A43787F0655F96B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5E76A4FAE1ADB41855E99DAC;
+			remoteInfo = MorningGuard;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		5FF580272F7B36200080011A /* Embed Foundation Extensions */ = {
+		5F1D9BDAC0794B93A53A35D2 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				5FF5803B2F7B95C80080011A /* MorningGuardShield.appex in Embed Foundation Extensions */,
-				5FF580222F7B36200080011A /* MorningGuardExtension MorningGuardExtension MorningGuardExtension.appex in Embed Foundation Extensions */,
+				F1D2CBE5CF69A9486DB81361 /* MorningGuardExtension MorningGuardExtension MorningGuardExtension.appex in Embed Foundation Extensions */,
+				F2E5C29BCF0123C298B95E0A /* MorningGuardShield.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,427 +82,430 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5FF57FD52F7B2C8A0080011A /* MorningGuard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MorningGuard.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5FF57FE22F7B2C8D0080011A /* MorningGuardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MorningGuardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5FF57FEC2F7B2C8E0080011A /* MorningGuardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MorningGuardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5FF580172F7B36200080011A /* MorningGuardExtension MorningGuardExtension MorningGuardExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MorningGuardExtension MorningGuardExtension MorningGuardExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5FF580192F7B36200080011A /* DeviceActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceActivity.framework; path = System/Library/Frameworks/DeviceActivity.framework; sourceTree = SDKROOT; };
-		5FF5802F2F7B95C80080011A /* MorningGuardShield.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MorningGuardShield.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		5FF580302F7B95C80080011A /* ManagedSettings.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManagedSettings.framework; path = System/Library/Frameworks/ManagedSettings.framework; sourceTree = SDKROOT; };
-		5FF580432F7BA5270080011A /* FamilyControls.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FamilyControls.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk/System/Library/Frameworks/FamilyControls.framework; sourceTree = DEVELOPER_DIR; };
-		5FF580452F7BA5340080011A /* ManagedSettings.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManagedSettings.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk/System/Library/Frameworks/ManagedSettings.framework; sourceTree = DEVELOPER_DIR; };
-		5FF580462F7BA5340080011A /* ManagedSettingsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManagedSettingsUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk/System/Library/Frameworks/ManagedSettingsUI.framework; sourceTree = DEVELOPER_DIR; };
-		5FF580492F7BA53D0080011A /* DeviceActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceActivity.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk/System/Library/Frameworks/DeviceActivity.framework; sourceTree = DEVELOPER_DIR; };
+		04898C4083FA5C816DF9016B /* MorningGuardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningGuardTests.swift; sourceTree = "<group>"; };
+		13F90B805445AC5BD8410064 /* GuardSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardSetupView.swift; sourceTree = "<group>"; };
+		14BB55BDAAD9F1749580CAD8 /* MorningGuardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningGuardUITests.swift; sourceTree = "<group>"; };
+		1EC091F919A39A81DB01085A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		26F7B8A214D92CED4400BBB7 /* DeviceActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceActivity.framework; path = System/Library/Frameworks/DeviceActivity.framework; sourceTree = SDKROOT; };
+		42993978A265440269330EE9 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		4C6C056AAB0CD28D22F13459 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		55B44AD55003A428962B525C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		564991B79F2BFB0B93DB6438 /* MorningGuardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningGuardUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7B8A456134914D12B205E142 /* ManagedSettingsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManagedSettingsUI.framework; path = System/Library/Frameworks/ManagedSettingsUI.framework; sourceTree = SDKROOT; };
+		8AF6E1B1BFE23A7F394439DF /* FamilyControls.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FamilyControls.framework; path = System/Library/Frameworks/FamilyControls.framework; sourceTree = SDKROOT; };
+		8DD5BF375507AA45C1C348C4 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		8DF7D1FA8FDF40E46E7EFDFC /* MorningGuardShield.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = MorningGuardShield.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		90D9266C4AF969C46EE56AC0 /* MorningGuard.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = MorningGuard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B0DDEB24122FCCBBD177CDA /* MorningGuardExtension MorningGuardExtension MorningGuardExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = "MorningGuardExtension MorningGuardExtension MorningGuardExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A412D4AC1B9A0E9ADB88231E /* GuardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardViewModel.swift; sourceTree = "<group>"; };
+		A89C5EF2A07B4BA7A5FE8C0D /* MorningGuardExtension MorningGuardExtension MorningGuardExtension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MorningGuardExtension MorningGuardExtension MorningGuardExtension-Bridging-Header.h"; sourceTree = "<group>"; };
+		B0330BD22B2E0AE54225793F /* MorningGuardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningGuardApp.swift; sourceTree = "<group>"; };
+		BCFC7EAB0DAC4FECC8180EC5 /* MorningGuardMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningGuardMonitor.swift; sourceTree = "<group>"; };
+		BD079805A648EDADBBF3BC74 /* MorningGuardTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MorningGuardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C46C240DE4D283974FD57A27 /* Color+MorningGuard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+MorningGuard.swift"; sourceTree = "<group>"; };
+		CC04609DE5D3A40C0470AA12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DF6C25CB52B959E6049202FA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E3EB7DE3884F0BA5AA7DC205 /* MorningGuardUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MorningGuardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E50DC86C7F1E9546E9949CBD /* ManagedSettings.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManagedSettings.framework; path = System/Library/Frameworks/ManagedSettings.framework; sourceTree = SDKROOT; };
+		F156255642C7F308A2003046 /* ShieldConfigurationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldConfigurationExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		5FF580232F7B36200080011A /* Exceptions for "MorningGuardExtension MorningGuardExtension MorningGuardExtension" folder in "MorningGuardExtension MorningGuardExtension MorningGuardExtension" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 5FF580162F7B36200080011A /* MorningGuardExtension MorningGuardExtension MorningGuardExtension */;
-		};
-		5FF5803C2F7B95C80080011A /* Exceptions for "MorningGuardShield" folder in "MorningGuardShield" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 5FF5802E2F7B95C80080011A /* MorningGuardShield */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		5FF57FD72F7B2C8A0080011A /* MorningGuard */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MorningGuard;
-			sourceTree = "<group>";
-		};
-		5FF57FE52F7B2C8D0080011A /* MorningGuardTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MorningGuardTests;
-			sourceTree = "<group>";
-		};
-		5FF57FEF2F7B2C8E0080011A /* MorningGuardUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MorningGuardUITests;
-			sourceTree = "<group>";
-		};
-		5FF5801B2F7B36200080011A /* MorningGuardExtension MorningGuardExtension MorningGuardExtension */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				5FF580232F7B36200080011A /* Exceptions for "MorningGuardExtension MorningGuardExtension MorningGuardExtension" folder in "MorningGuardExtension MorningGuardExtension MorningGuardExtension" target */,
-			);
-			path = "MorningGuardExtension MorningGuardExtension MorningGuardExtension";
-			sourceTree = "<group>";
-		};
-		5FF580342F7B95C80080011A /* MorningGuardShield */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				5FF5803C2F7B95C80080011A /* Exceptions for "MorningGuardShield" folder in "MorningGuardShield" target */,
-			);
-			path = MorningGuardShield;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
-
 /* Begin PBXFrameworksBuildPhase section */
-		5FF57FD22F7B2C8A0080011A /* Frameworks */ = {
+		189817017990B45ED89788CA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FF580442F7BA5280080011A /* FamilyControls.framework in Frameworks */,
-				5FF5804A2F7BA53D0080011A /* DeviceActivity.framework in Frameworks */,
-				5FF580472F7BA5340080011A /* ManagedSettings.framework in Frameworks */,
-				5FF580482F7BA5340080011A /* ManagedSettingsUI.framework in Frameworks */,
+				5013F0B65671A019D28D5B1C /* FamilyControls.framework in Frameworks */,
+				A35BF25DB4A0F5318A360BFC /* DeviceActivity.framework in Frameworks */,
+				061160A23C6D9C34A9A26244 /* ManagedSettings.framework in Frameworks */,
+				F966922620CE41934B173B54 /* ManagedSettingsUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5FF57FDF2F7B2C8D0080011A /* Frameworks */ = {
+		6DCF21BE6353AE0417BFDEF6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F02C2D9A2C935A1F023404BD /* DeviceActivity.framework in Frameworks */,
+				0D36986215691FA6A6B8606F /* ManagedSettings.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5FF57FE92F7B2C8E0080011A /* Frameworks */ = {
+		8D3B0719BA7D46317F49E15E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5FF580142F7B36200080011A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5FF5801A2F7B36200080011A /* DeviceActivity.framework in Frameworks */,
-				5FF5804B2F7BA5610080011A /* ManagedSettings.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5FF5802C2F7B95C80080011A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5FF580312F7B95C80080011A /* ManagedSettings.framework in Frameworks */,
+				E87E96F85AF37977B0C19DC8 /* ManagedSettings.framework in Frameworks */,
+				1D7ABE88E3D55218B558AF44 /* ManagedSettingsUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5FF57FCC2F7B2C8A0080011A = {
+		02167EFC7C3D9941A8BBB4CF = {
 			isa = PBXGroup;
 			children = (
-				5FF57FD72F7B2C8A0080011A /* MorningGuard */,
-				5FF57FE52F7B2C8D0080011A /* MorningGuardTests */,
-				5FF57FEF2F7B2C8E0080011A /* MorningGuardUITests */,
-				5FF5801B2F7B36200080011A /* MorningGuardExtension MorningGuardExtension MorningGuardExtension */,
-				5FF580342F7B95C80080011A /* MorningGuardShield */,
-				5FF580182F7B36200080011A /* Frameworks */,
-				5FF57FD62F7B2C8A0080011A /* Products */,
+				24B03B881FD2DB32CFAA50F3 /* MorningGuard */,
+				A18960E2E4CD34A36E573DBE /* MorningGuardExtension MorningGuardExtension MorningGuardExtension */,
+				92960A508653D4C05F3BA95F /* MorningGuardShield */,
+				4CFBFE5AA2AF26EAB1485C2F /* MorningGuardTests */,
+				BD9F1A03351E0AD73DEB86DB /* MorningGuardUITests */,
+				B063A747F4417574B3D55E92 /* Frameworks */,
+				1696B73879BB79C39B03B580 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		5FF57FD62F7B2C8A0080011A /* Products */ = {
+		1696B73879BB79C39B03B580 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5FF57FD52F7B2C8A0080011A /* MorningGuard.app */,
-				5FF57FE22F7B2C8D0080011A /* MorningGuardTests.xctest */,
-				5FF57FEC2F7B2C8E0080011A /* MorningGuardUITests.xctest */,
-				5FF580172F7B36200080011A /* MorningGuardExtension MorningGuardExtension MorningGuardExtension.appex */,
-				5FF5802F2F7B95C80080011A /* MorningGuardShield.appex */,
+				90D9266C4AF969C46EE56AC0 /* MorningGuard.app */,
+				9B0DDEB24122FCCBBD177CDA /* MorningGuardExtension MorningGuardExtension MorningGuardExtension.appex */,
+				8DF7D1FA8FDF40E46E7EFDFC /* MorningGuardShield.appex */,
+				BD079805A648EDADBBF3BC74 /* MorningGuardTests.xctest */,
+				E3EB7DE3884F0BA5AA7DC205 /* MorningGuardUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5FF580182F7B36200080011A /* Frameworks */ = {
+		24B03B881FD2DB32CFAA50F3 /* MorningGuard */ = {
 			isa = PBXGroup;
 			children = (
-				5FF580492F7BA53D0080011A /* DeviceActivity.framework */,
-				5FF580452F7BA5340080011A /* ManagedSettings.framework */,
-				5FF580462F7BA5340080011A /* ManagedSettingsUI.framework */,
-				5FF580432F7BA5270080011A /* FamilyControls.framework */,
-				5FF580192F7B36200080011A /* DeviceActivity.framework */,
-				5FF580302F7B95C80080011A /* ManagedSettings.framework */,
+				42993978A265440269330EE9 /* AppState.swift */,
+				CC04609DE5D3A40C0470AA12 /* Assets.xcassets */,
+				C46C240DE4D283974FD57A27 /* Color+MorningGuard.swift */,
+				55B44AD55003A428962B525C /* ContentView.swift */,
+				13F90B805445AC5BD8410064 /* GuardSetupView.swift */,
+				A412D4AC1B9A0E9ADB88231E /* GuardViewModel.swift */,
+				DF6C25CB52B959E6049202FA /* HomeView.swift */,
+				B0330BD22B2E0AE54225793F /* MorningGuardApp.swift */,
+				8DD5BF375507AA45C1C348C4 /* NotificationService.swift */,
+				4C6C056AAB0CD28D22F13459 /* OnboardingView.swift */,
+				1EC091F919A39A81DB01085A /* SettingsView.swift */,
+			);
+			path = MorningGuard;
+			sourceTree = "<group>";
+		};
+		4CFBFE5AA2AF26EAB1485C2F /* MorningGuardTests */ = {
+			isa = PBXGroup;
+			children = (
+				04898C4083FA5C816DF9016B /* MorningGuardTests.swift */,
+			);
+			path = MorningGuardTests;
+			sourceTree = "<group>";
+		};
+		92960A508653D4C05F3BA95F /* MorningGuardShield */ = {
+			isa = PBXGroup;
+			children = (
+				F156255642C7F308A2003046 /* ShieldConfigurationExtension.swift */,
+			);
+			path = MorningGuardShield;
+			sourceTree = "<group>";
+		};
+		A18960E2E4CD34A36E573DBE /* MorningGuardExtension MorningGuardExtension MorningGuardExtension */ = {
+			isa = PBXGroup;
+			children = (
+				A89C5EF2A07B4BA7A5FE8C0D /* MorningGuardExtension MorningGuardExtension MorningGuardExtension-Bridging-Header.h */,
+				BCFC7EAB0DAC4FECC8180EC5 /* MorningGuardMonitor.swift */,
+			);
+			path = "MorningGuardExtension MorningGuardExtension MorningGuardExtension";
+			sourceTree = "<group>";
+		};
+		B063A747F4417574B3D55E92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26F7B8A214D92CED4400BBB7 /* DeviceActivity.framework */,
+				8AF6E1B1BFE23A7F394439DF /* FamilyControls.framework */,
+				E50DC86C7F1E9546E9949CBD /* ManagedSettings.framework */,
+				7B8A456134914D12B205E142 /* ManagedSettingsUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD9F1A03351E0AD73DEB86DB /* MorningGuardUITests */ = {
+			isa = PBXGroup;
+			children = (
+				14BB55BDAAD9F1749580CAD8 /* MorningGuardUITests.swift */,
+				564991B79F2BFB0B93DB6438 /* MorningGuardUITestsLaunchTests.swift */,
+			);
+			path = MorningGuardUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5FF57FD42F7B2C8A0080011A /* MorningGuard */ = {
+		5E76A4FAE1ADB41855E99DAC /* MorningGuard */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5FF57FF62F7B2C8E0080011A /* Build configuration list for PBXNativeTarget "MorningGuard" */;
+			buildConfigurationList = 20C171E9AEA87D4D758D7AC5 /* Build configuration list for PBXNativeTarget "MorningGuard" */;
 			buildPhases = (
-				5FF57FD12F7B2C8A0080011A /* Sources */,
-				5FF57FD22F7B2C8A0080011A /* Frameworks */,
-				5FF57FD32F7B2C8A0080011A /* Resources */,
-				5FF580272F7B36200080011A /* Embed Foundation Extensions */,
+				35117BFEF0DC28EA7752166C /* Sources */,
+				1E880AE7FFB61220F3D34F35 /* Resources */,
+				189817017990B45ED89788CA /* Frameworks */,
+				5F1D9BDAC0794B93A53A35D2 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5FF580212F7B36200080011A /* PBXTargetDependency */,
-				5FF5803A2F7B95C80080011A /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				5FF57FD72F7B2C8A0080011A /* MorningGuard */,
+				D3FA0365BBA196AC1686AA66 /* PBXTargetDependency */,
+				E4E610CEB314A064FD0928B5 /* PBXTargetDependency */,
 			);
 			name = MorningGuard;
 			packageProductDependencies = (
 			);
 			productName = MorningGuard;
-			productReference = 5FF57FD52F7B2C8A0080011A /* MorningGuard.app */;
+			productReference = 90D9266C4AF969C46EE56AC0 /* MorningGuard.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5FF57FE12F7B2C8D0080011A /* MorningGuardTests */ = {
+		9D596A6BCB0BC3D4D1FE0C5D /* MorningGuardShield */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5FF57FF92F7B2C8E0080011A /* Build configuration list for PBXNativeTarget "MorningGuardTests" */;
+			buildConfigurationList = 3B0677A3C799079D50493119 /* Build configuration list for PBXNativeTarget "MorningGuardShield" */;
 			buildPhases = (
-				5FF57FDE2F7B2C8D0080011A /* Sources */,
-				5FF57FDF2F7B2C8D0080011A /* Frameworks */,
-				5FF57FE02F7B2C8D0080011A /* Resources */,
+				401653B926745C094461F0DF /* Sources */,
+				8D3B0719BA7D46317F49E15E /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5FF57FE42F7B2C8D0080011A /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				5FF57FE52F7B2C8D0080011A /* MorningGuardTests */,
-			);
-			name = MorningGuardTests;
-			packageProductDependencies = (
-			);
-			productName = MorningGuardTests;
-			productReference = 5FF57FE22F7B2C8D0080011A /* MorningGuardTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		5FF57FEB2F7B2C8E0080011A /* MorningGuardUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5FF57FFC2F7B2C8E0080011A /* Build configuration list for PBXNativeTarget "MorningGuardUITests" */;
-			buildPhases = (
-				5FF57FE82F7B2C8E0080011A /* Sources */,
-				5FF57FE92F7B2C8E0080011A /* Frameworks */,
-				5FF57FEA2F7B2C8E0080011A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5FF57FEE2F7B2C8E0080011A /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				5FF57FEF2F7B2C8E0080011A /* MorningGuardUITests */,
-			);
-			name = MorningGuardUITests;
-			packageProductDependencies = (
-			);
-			productName = MorningGuardUITests;
-			productReference = 5FF57FEC2F7B2C8E0080011A /* MorningGuardUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-		5FF580162F7B36200080011A /* MorningGuardExtension MorningGuardExtension MorningGuardExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5FF580242F7B36200080011A /* Build configuration list for PBXNativeTarget "MorningGuardExtension MorningGuardExtension MorningGuardExtension" */;
-			buildPhases = (
-				5FF580132F7B36200080011A /* Sources */,
-				5FF580142F7B36200080011A /* Frameworks */,
-				5FF580152F7B36200080011A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				5FF5801B2F7B36200080011A /* MorningGuardExtension MorningGuardExtension MorningGuardExtension */,
-			);
-			name = "MorningGuardExtension MorningGuardExtension MorningGuardExtension";
-			packageProductDependencies = (
-			);
-			productName = "MorningGuardExtension MorningGuardExtension MorningGuardExtension";
-			productReference = 5FF580172F7B36200080011A /* MorningGuardExtension MorningGuardExtension MorningGuardExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
-		5FF5802E2F7B95C80080011A /* MorningGuardShield */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5FF5803D2F7B95C80080011A /* Build configuration list for PBXNativeTarget "MorningGuardShield" */;
-			buildPhases = (
-				5FF5802B2F7B95C80080011A /* Sources */,
-				5FF5802C2F7B95C80080011A /* Frameworks */,
-				5FF5802D2F7B95C80080011A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				5FF580342F7B95C80080011A /* MorningGuardShield */,
 			);
 			name = MorningGuardShield;
 			packageProductDependencies = (
 			);
 			productName = MorningGuardShield;
-			productReference = 5FF5802F2F7B95C80080011A /* MorningGuardShield.appex */;
+			productReference = 8DF7D1FA8FDF40E46E7EFDFC /* MorningGuardShield.appex */;
 			productType = "com.apple.product-type.app-extension";
+		};
+		CD48573D83627C96415FB7CD /* MorningGuardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76DE83CFCA8AFD440DEE642F /* Build configuration list for PBXNativeTarget "MorningGuardUITests" */;
+			buildPhases = (
+				EE7FB3666DE35F4862411188 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A6513F253E8467AE49EC4917 /* PBXTargetDependency */,
+			);
+			name = MorningGuardUITests;
+			packageProductDependencies = (
+			);
+			productName = MorningGuardUITests;
+			productReference = E3EB7DE3884F0BA5AA7DC205 /* MorningGuardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		E5B6D555155C9B09107071B2 /* MorningGuardExtension MorningGuardExtension MorningGuardExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22877244E75D48AC4EE06130 /* Build configuration list for PBXNativeTarget "MorningGuardExtension MorningGuardExtension MorningGuardExtension" */;
+			buildPhases = (
+				231B0490F60391E5C908EC1A /* Sources */,
+				6DCF21BE6353AE0417BFDEF6 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MorningGuardExtension MorningGuardExtension MorningGuardExtension";
+			packageProductDependencies = (
+			);
+			productName = "MorningGuardExtension MorningGuardExtension MorningGuardExtension";
+			productReference = 9B0DDEB24122FCCBBD177CDA /* MorningGuardExtension MorningGuardExtension MorningGuardExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		F94BCAEE0DD398A2A379BA84 /* MorningGuardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 473B7EC5B42CDC61C2DB6DAF /* Build configuration list for PBXNativeTarget "MorningGuardTests" */;
+			buildPhases = (
+				4161DC8CA7270A4F23E3015E /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF5DDA255838EEF7A3BBFDD3 /* PBXTargetDependency */,
+			);
+			name = MorningGuardTests;
+			packageProductDependencies = (
+			);
+			productName = MorningGuardTests;
+			productReference = BD079805A648EDADBBF3BC74 /* MorningGuardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5FF57FCD2F7B2C8A0080011A /* Project object */ = {
+		8E863610A43787F0655F96B4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 2620;
-				LastUpgradeCheck = 2620;
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					5FF57FD42F7B2C8A0080011A = {
-						CreatedOnToolsVersion = 26.2;
+					5E76A4FAE1ADB41855E99DAC = {
+						DevelopmentTeam = 42N6589XL7;
+						ProvisioningStyle = Automatic;
 					};
-					5FF57FE12F7B2C8D0080011A = {
-						CreatedOnToolsVersion = 26.2;
-						TestTargetID = 5FF57FD42F7B2C8A0080011A;
+					9D596A6BCB0BC3D4D1FE0C5D = {
+						DevelopmentTeam = 42N6589XL7;
+						ProvisioningStyle = Automatic;
 					};
-					5FF57FEB2F7B2C8E0080011A = {
-						CreatedOnToolsVersion = 26.2;
-						TestTargetID = 5FF57FD42F7B2C8A0080011A;
+					CD48573D83627C96415FB7CD = {
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5E76A4FAE1ADB41855E99DAC;
 					};
-					5FF580162F7B36200080011A = {
-						CreatedOnToolsVersion = 26.2;
-						LastSwiftMigration = 2620;
+					E5B6D555155C9B09107071B2 = {
+						DevelopmentTeam = 42N6589XL7;
+						ProvisioningStyle = Automatic;
 					};
-					5FF5802E2F7B95C80080011A = {
-						CreatedOnToolsVersion = 26.2;
-						LastSwiftMigration = 2620;
+					F94BCAEE0DD398A2A379BA84 = {
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 5FF57FD02F7B2C8A0080011A /* Build configuration list for PBXProject "MorningGuard" */;
+			buildConfigurationList = C74121D782325D54EA138F65 /* Build configuration list for PBXProject "MorningGuard" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
-			mainGroup = 5FF57FCC2F7B2C8A0080011A;
+			mainGroup = 02167EFC7C3D9941A8BBB4CF;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 5FF57FD62F7B2C8A0080011A /* Products */;
+			productRefGroup = 1696B73879BB79C39B03B580 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5FF57FD42F7B2C8A0080011A /* MorningGuard */,
-				5FF57FE12F7B2C8D0080011A /* MorningGuardTests */,
-				5FF57FEB2F7B2C8E0080011A /* MorningGuardUITests */,
-				5FF580162F7B36200080011A /* MorningGuardExtension MorningGuardExtension MorningGuardExtension */,
-				5FF5802E2F7B95C80080011A /* MorningGuardShield */,
+				5E76A4FAE1ADB41855E99DAC /* MorningGuard */,
+				E5B6D555155C9B09107071B2 /* MorningGuardExtension MorningGuardExtension MorningGuardExtension */,
+				9D596A6BCB0BC3D4D1FE0C5D /* MorningGuardShield */,
+				F94BCAEE0DD398A2A379BA84 /* MorningGuardTests */,
+				CD48573D83627C96415FB7CD /* MorningGuardUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5FF57FD32F7B2C8A0080011A /* Resources */ = {
+		1E880AE7FFB61220F3D34F35 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5FF57FE02F7B2C8D0080011A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5FF57FEA2F7B2C8E0080011A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5FF580152F7B36200080011A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5FF5802D2F7B95C80080011A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				871006D6B5FC19798D40E7D3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5FF57FD12F7B2C8A0080011A /* Sources */ = {
+		231B0490F60391E5C908EC1A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9CC6E0CB4518843E1B1E11A /* MorningGuardMonitor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5FF57FDE2F7B2C8D0080011A /* Sources */ = {
+		35117BFEF0DC28EA7752166C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41278D220998DF81CE3632AD /* AppState.swift in Sources */,
+				0691DABC46A645CE32071804 /* Color+MorningGuard.swift in Sources */,
+				235E3774DED21F027B9D6CA6 /* ContentView.swift in Sources */,
+				EED35A627DCE21A9FCCC14CE /* GuardSetupView.swift in Sources */,
+				A429C8C23004555631708579 /* GuardViewModel.swift in Sources */,
+				A754581100C7EE7418DDD16B /* HomeView.swift in Sources */,
+				39838EAEDDC02306160E4A1B /* MorningGuardApp.swift in Sources */,
+				97749590FB2673563D8B283A /* NotificationService.swift in Sources */,
+				017273C874BE95FACE6709A1 /* OnboardingView.swift in Sources */,
+				9CB71067AF6E99DA3C078003 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5FF57FE82F7B2C8E0080011A /* Sources */ = {
+		401653B926745C094461F0DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53D4794DC6E1A0499F0DD0F7 /* ShieldConfigurationExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5FF580132F7B36200080011A /* Sources */ = {
+		4161DC8CA7270A4F23E3015E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB38AEB361AC9C03F693DCA0 /* MorningGuardTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5FF5802B2F7B95C80080011A /* Sources */ = {
+		EE7FB3666DE35F4862411188 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DFCBBB321B80A35CB84D7A0 /* MorningGuardUITests.swift in Sources */,
+				EC51F0002B196B8FA7D92B0F /* MorningGuardUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5FF57FE42F7B2C8D0080011A /* PBXTargetDependency */ = {
+		A6513F253E8467AE49EC4917 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5FF57FD42F7B2C8A0080011A /* MorningGuard */;
-			targetProxy = 5FF57FE32F7B2C8D0080011A /* PBXContainerItemProxy */;
+			target = 5E76A4FAE1ADB41855E99DAC /* MorningGuard */;
+			targetProxy = EE7113A6B09C23AE2EA2C809 /* PBXContainerItemProxy */;
 		};
-		5FF57FEE2F7B2C8E0080011A /* PBXTargetDependency */ = {
+		D3FA0365BBA196AC1686AA66 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5FF57FD42F7B2C8A0080011A /* MorningGuard */;
-			targetProxy = 5FF57FED2F7B2C8E0080011A /* PBXContainerItemProxy */;
+			target = E5B6D555155C9B09107071B2 /* MorningGuardExtension MorningGuardExtension MorningGuardExtension */;
+			targetProxy = 1F26DF5233B1A4279AA68D51 /* PBXContainerItemProxy */;
 		};
-		5FF580212F7B36200080011A /* PBXTargetDependency */ = {
+		E4E610CEB314A064FD0928B5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5FF580162F7B36200080011A /* MorningGuardExtension MorningGuardExtension MorningGuardExtension */;
-			targetProxy = 5FF580202F7B36200080011A /* PBXContainerItemProxy */;
+			target = 9D596A6BCB0BC3D4D1FE0C5D /* MorningGuardShield */;
+			targetProxy = 5ED49A8BCB99ED568D8B2B78 /* PBXContainerItemProxy */;
 		};
-		5FF5803A2F7B95C80080011A /* PBXTargetDependency */ = {
+		FF5DDA255838EEF7A3BBFDD3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5FF5802E2F7B95C80080011A /* MorningGuardShield */;
-			targetProxy = 5FF580392F7B95C80080011A /* PBXContainerItemProxy */;
+			target = 5E76A4FAE1ADB41855E99DAC /* MorningGuard */;
+			targetProxy = D1D0CCF26F321ED6B39144B8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		5FF57FF42F7B2C8E0080011A /* Debug */ = {
+		1A6B42B89802B2A31922D5F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "MorningGuardExtension MorningGuardExtension MorningGuardExtension/MorningGuardExtension_MorningGuardExtension_MorningGuardExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 42N6589XL7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MorningGuardExtension MorningGuardExtension MorningGuardExtension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "MorningGuardExtension MorningGuardExtension MorningGuardExtension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alex.MorningGuard.MorningGuardExtension-MorningGuardExtension-MorningGuardExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MorningGuardExtension MorningGuardExtension MorningGuardExtension/MorningGuardExtension MorningGuardExtension MorningGuardExtension-Bridging-Header.h";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2058CEC2BDD88B517F650337 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -493,6 +513,386 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		27ECDA037F23C1602EC4220E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alex.MorningGuardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MorningGuard.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MorningGuard";
+				XROS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Release;
+		};
+		61CAA8145AABFC9B0C872F74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alex.MorningGuardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MorningGuard.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MorningGuard";
+				XROS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Debug;
+		};
+		834CB9E2F827CD5F2111F216 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = NO;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MorningGuard/MorningGuard.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 42N6589XL7;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alex.MorningGuard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				XROS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Debug;
+		};
+		98BDF0D2F29E37966822D4FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alex.MorningGuardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MorningGuard;
+				XROS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Release;
+		};
+		9F5557AAED7281BE6DF3577B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MorningGuardShield/MorningGuardShield.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 42N6589XL7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MorningGuardShield/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MorningGuardShield;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alex.MorningGuard.MorningGuardShield;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A757973F1FBCFDAB6DC807C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "MorningGuardExtension MorningGuardExtension MorningGuardExtension/MorningGuardExtension_MorningGuardExtension_MorningGuardExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 42N6589XL7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MorningGuardExtension MorningGuardExtension MorningGuardExtension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "MorningGuardExtension MorningGuardExtension MorningGuardExtension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alex.MorningGuard.MorningGuardExtension-MorningGuardExtension-MorningGuardExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MorningGuardExtension MorningGuardExtension MorningGuardExtension/MorningGuardExtension MorningGuardExtension MorningGuardExtension-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B760E664D562B7EBDEF4235E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MorningGuardShield/MorningGuardShield.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 42N6589XL7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MorningGuardShield/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MorningGuardShield;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alex.MorningGuard.MorningGuardShield;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C2626BF6CF362393D24A4735 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alex.MorningGuardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MorningGuard;
+				XROS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Debug;
+		};
+		DD5AE3345A55EB4AF2E8BBF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = NO;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MorningGuard/MorningGuard.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 42N6589XL7;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alex.MorningGuard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				XROS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Release;
+		};
+		F14AC518FAC72B342A579029 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -537,468 +937,77 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
-		};
-		5FF57FF52F7B2C8E0080011A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				SWIFT_COMPILATION_MODE = wholemodule;
-			};
-			name = Release;
-		};
-		5FF57FF72F7B2C8E0080011A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = MorningGuard/MorningGuard.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 42N6589XL7;
-				ENABLE_APP_SANDBOX = YES;
-				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
-				GENERATE_INFOPLIST_FILE = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 26.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alex.MorningGuard;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				REGISTER_APP_GROUPS = YES;
-				SDKROOT = auto;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				XROS_DEPLOYMENT_TARGET = 26.2;
-			};
-			name = Debug;
-		};
-		5FF57FF82F7B2C8E0080011A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = MorningGuard/MorningGuard.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 42N6589XL7;
-				ENABLE_APP_SANDBOX = YES;
-				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
-				GENERATE_INFOPLIST_FILE = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 26.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alex.MorningGuard;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				REGISTER_APP_GROUPS = YES;
-				SDKROOT = auto;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				XROS_DEPLOYMENT_TARGET = 26.2;
-			};
-			name = Release;
-		};
-		5FF57FFA2F7B2C8E0080011A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
-				MACOSX_DEPLOYMENT_TARGET = 26.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alex.MorningGuardTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MorningGuard.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MorningGuard";
-				XROS_DEPLOYMENT_TARGET = 26.2;
-			};
-			name = Debug;
-		};
-		5FF57FFB2F7B2C8E0080011A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
-				MACOSX_DEPLOYMENT_TARGET = 26.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alex.MorningGuardTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MorningGuard.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MorningGuard";
-				XROS_DEPLOYMENT_TARGET = 26.2;
-			};
-			name = Release;
-		};
-		5FF57FFD2F7B2C8E0080011A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
-				MACOSX_DEPLOYMENT_TARGET = 26.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alex.MorningGuardUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MorningGuard;
-				XROS_DEPLOYMENT_TARGET = 26.2;
-			};
-			name = Debug;
-		};
-		5FF57FFE2F7B2C8E0080011A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
-				MACOSX_DEPLOYMENT_TARGET = 26.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alex.MorningGuardUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MorningGuard;
-				XROS_DEPLOYMENT_TARGET = 26.2;
-			};
-			name = Release;
-		};
-		5FF580252F7B36200080011A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "MorningGuardExtension MorningGuardExtension MorningGuardExtension/MorningGuardExtension_MorningGuardExtension_MorningGuardExtension.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 42N6589XL7;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "MorningGuardExtension MorningGuardExtension MorningGuardExtension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "MorningGuardExtension MorningGuardExtension MorningGuardExtension";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.alex.MorningGuard.MorningGuardExtension-MorningGuardExtension-MorningGuardExtension";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "MorningGuardExtension MorningGuardExtension MorningGuardExtension/MorningGuardExtension MorningGuardExtension MorningGuardExtension-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		5FF580262F7B36200080011A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "MorningGuardExtension MorningGuardExtension MorningGuardExtension/MorningGuardExtension_MorningGuardExtension_MorningGuardExtension.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 42N6589XL7;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "MorningGuardExtension MorningGuardExtension MorningGuardExtension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "MorningGuardExtension MorningGuardExtension MorningGuardExtension";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.alex.MorningGuard.MorningGuardExtension-MorningGuardExtension-MorningGuardExtension";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "MorningGuardExtension MorningGuardExtension MorningGuardExtension/MorningGuardExtension MorningGuardExtension MorningGuardExtension-Bridging-Header.h";
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		5FF5803E2F7B95C80080011A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = MorningGuardShield/MorningGuardShield.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 42N6589XL7;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MorningGuardShield/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = MorningGuardShield;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alex.MorningGuard.MorningGuardShield;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		5FF5803F2F7B95C80080011A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = MorningGuardShield/MorningGuardShield.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 42N6589XL7;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MorningGuardShield/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = MorningGuardShield;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alex.MorningGuard.MorningGuardShield;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5FF57FD02F7B2C8A0080011A /* Build configuration list for PBXProject "MorningGuard" */ = {
+		20C171E9AEA87D4D758D7AC5 /* Build configuration list for PBXNativeTarget "MorningGuard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5FF57FF42F7B2C8E0080011A /* Debug */,
-				5FF57FF52F7B2C8E0080011A /* Release */,
+				834CB9E2F827CD5F2111F216 /* Debug */,
+				DD5AE3345A55EB4AF2E8BBF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		5FF57FF62F7B2C8E0080011A /* Build configuration list for PBXNativeTarget "MorningGuard" */ = {
+		22877244E75D48AC4EE06130 /* Build configuration list for PBXNativeTarget "MorningGuardExtension MorningGuardExtension MorningGuardExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5FF57FF72F7B2C8E0080011A /* Debug */,
-				5FF57FF82F7B2C8E0080011A /* Release */,
+				A757973F1FBCFDAB6DC807C9 /* Debug */,
+				1A6B42B89802B2A31922D5F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		5FF57FF92F7B2C8E0080011A /* Build configuration list for PBXNativeTarget "MorningGuardTests" */ = {
+		3B0677A3C799079D50493119 /* Build configuration list for PBXNativeTarget "MorningGuardShield" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5FF57FFA2F7B2C8E0080011A /* Debug */,
-				5FF57FFB2F7B2C8E0080011A /* Release */,
+				B760E664D562B7EBDEF4235E /* Debug */,
+				9F5557AAED7281BE6DF3577B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		5FF57FFC2F7B2C8E0080011A /* Build configuration list for PBXNativeTarget "MorningGuardUITests" */ = {
+		473B7EC5B42CDC61C2DB6DAF /* Build configuration list for PBXNativeTarget "MorningGuardTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5FF57FFD2F7B2C8E0080011A /* Debug */,
-				5FF57FFE2F7B2C8E0080011A /* Release */,
+				61CAA8145AABFC9B0C872F74 /* Debug */,
+				27ECDA037F23C1602EC4220E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		5FF580242F7B36200080011A /* Build configuration list for PBXNativeTarget "MorningGuardExtension MorningGuardExtension MorningGuardExtension" */ = {
+		76DE83CFCA8AFD440DEE642F /* Build configuration list for PBXNativeTarget "MorningGuardUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5FF580252F7B36200080011A /* Debug */,
-				5FF580262F7B36200080011A /* Release */,
+				C2626BF6CF362393D24A4735 /* Debug */,
+				98BDF0D2F29E37966822D4FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		5FF5803D2F7B95C80080011A /* Build configuration list for PBXNativeTarget "MorningGuardShield" */ = {
+		C74121D782325D54EA138F65 /* Build configuration list for PBXProject "MorningGuard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5FF5803E2F7B95C80080011A /* Debug */,
-				5FF5803F2F7B95C80080011A /* Release */,
+				F14AC518FAC72B342A579029 /* Debug */,
+				2058CEC2BDD88B517F650337 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 5FF57FCD2F7B2C8A0080011A /* Project object */;
+	rootObject = 8E863610A43787F0655F96B4 /* Project object */;
 }

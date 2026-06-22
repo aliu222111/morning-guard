@@ -171,7 +171,7 @@ struct InstagramLogo: View {
     var size: CGFloat = 40
     var body: some View {
         Canvas { ctx, sz in
-            // Gradient background
+            let s = sz.width
             let gradient = Gradient(colors: [
                 Color(red: 1.00, green: 0.84, blue: 0.00),
                 Color(red: 1.00, green: 0.48, blue: 0.00),
@@ -181,20 +181,20 @@ struct InstagramLogo: View {
             ])
             let rect = CGRect(origin: .zero, size: sz)
             ctx.fill(
-                Path(roundedRect: rect, cornerRadius: sz * 0.25),
+                Path(roundedRect: rect, cornerRadius: s * 0.25),
                 with: .linearGradient(gradient,
-                    startPoint: CGPoint(x: sz * 0.2, y: sz),
-                    endPoint: CGPoint(x: sz * 0.8, y: 0))
+                    startPoint: CGPoint(x: s * 0.2, y: s),
+                    endPoint: CGPoint(x: s * 0.8, y: 0))
             )
             // Outer square ring
-            let ring = CGRect(x: sz*0.275, y: sz*0.275, width: sz*0.45, height: sz*0.45)
-            var ringPath = Path(roundedRect: ring, cornerRadius: sz*0.13)
-            ctx.stroke(ringPath, with: .color(.white), style: StrokeStyle(lineWidth: sz*0.05))
+            let ring = CGRect(x: s*0.275, y: s*0.275, width: s*0.45, height: s*0.45)
+            var ringPath = Path(roundedRect: ring, cornerRadius: s*0.13)
+            ctx.stroke(ringPath, with: .color(.white), style: StrokeStyle(lineWidth: s*0.05))
             // Inner circle
-            let circleRect = CGRect(x: sz*0.375, y: sz*0.375, width: sz*0.25, height: sz*0.25)
-            ctx.stroke(Path(ellipseIn: circleRect), with: .color(.white), style: StrokeStyle(lineWidth: sz*0.05))
+            let circleRect = CGRect(x: s*0.375, y: s*0.375, width: s*0.25, height: s*0.25)
+            ctx.stroke(Path(ellipseIn: circleRect), with: .color(.white), style: StrokeStyle(lineWidth: s*0.05))
             // Dot
-            let dot = CGRect(x: sz*0.615, y: sz*0.27, width: sz*0.075, height: sz*0.075)
+            let dot = CGRect(x: s*0.615, y: s*0.27, width: s*0.075, height: s*0.075)
             ctx.fill(Path(ellipseIn: dot), with: .color(.white))
         }
         .frame(width: size, height: size)
@@ -206,27 +206,28 @@ struct TikTokLogo: View {
     var size: CGFloat = 40
     var body: some View {
         Canvas { ctx, sz in
+            let s = sz.width
             ctx.fill(
-                Path(roundedRect: CGRect(origin: .zero, size: CGSize(width: sz, height: sz)),
-                     cornerRadius: sz * 0.25),
+                Path(roundedRect: CGRect(origin: .zero, size: sz),
+                     cornerRadius: s * 0.25),
                 with: .color(.black)
             )
             // Musical note / TikTok shape
             var p = Path()
-            p.move(to: CGPoint(x: sz*0.56, y: sz*0.20))
-            p.addLine(to: CGPoint(x: sz*0.56, y: sz*0.575))
-            let noteCircle = CGRect(x: sz*0.34, y: sz*0.55, width: sz*0.22, height: sz*0.22)
+            p.move(to: CGPoint(x: s*0.56, y: s*0.20))
+            p.addLine(to: CGPoint(x: s*0.56, y: s*0.575))
+            let noteCircle = CGRect(x: s*0.34, y: s*0.55, width: s*0.22, height: s*0.22)
             p.addEllipse(in: noteCircle)
-            ctx.stroke(p, with: .color(.white), style: StrokeStyle(lineWidth: sz*0.075, lineCap: .round))
+            ctx.stroke(p, with: .color(.white), style: StrokeStyle(lineWidth: s*0.075, lineCap: .round))
             // Right side curve (the flag)
             var flag = Path()
-            flag.move(to: CGPoint(x: sz*0.56, y: sz*0.20))
+            flag.move(to: CGPoint(x: s*0.56, y: s*0.20))
             flag.addCurve(
-                to: CGPoint(x: sz*0.76, y: sz*0.305),
-                control1: CGPoint(x: sz*0.66, y: sz*0.20),
-                control2: CGPoint(x: sz*0.76, y: sz*0.24)
+                to: CGPoint(x: s*0.76, y: s*0.305),
+                control1: CGPoint(x: s*0.66, y: s*0.20),
+                control2: CGPoint(x: s*0.76, y: s*0.24)
             )
-            ctx.stroke(flag, with: .color(.white), style: StrokeStyle(lineWidth: sz*0.075, lineCap: .round))
+            ctx.stroke(flag, with: .color(.white), style: StrokeStyle(lineWidth: s*0.075, lineCap: .round))
         }
         .frame(width: size, height: size)
     }
@@ -236,18 +237,19 @@ struct XTwitterLogo: View {
     var size: CGFloat = 40
     var body: some View {
         Canvas { ctx, sz in
+            let s = sz.width
             ctx.fill(
-                Path(roundedRect: CGRect(origin: .zero, size: CGSize(width: sz, height: sz)),
-                     cornerRadius: sz * 0.25),
+                Path(roundedRect: CGRect(origin: .zero, size: sz),
+                     cornerRadius: s * 0.25),
                 with: .color(.black)
             )
             // X shape
             var x = Path()
-            x.move(to: CGPoint(x: sz*0.22, y: sz*0.23))
-            x.addLine(to: CGPoint(x: sz*0.78, y: sz*0.77))
-            x.move(to: CGPoint(x: sz*0.78, y: sz*0.23))
-            x.addLine(to: CGPoint(x: sz*0.22, y: sz*0.77))
-            ctx.stroke(x, with: .color(.white), style: StrokeStyle(lineWidth: sz*0.09, lineCap: .round))
+            x.move(to: CGPoint(x: s*0.22, y: s*0.23))
+            x.addLine(to: CGPoint(x: s*0.78, y: s*0.77))
+            x.move(to: CGPoint(x: s*0.78, y: s*0.23))
+            x.addLine(to: CGPoint(x: s*0.22, y: s*0.77))
+            ctx.stroke(x, with: .color(.white), style: StrokeStyle(lineWidth: s*0.09, lineCap: .round))
         }
         .frame(width: size, height: size)
     }
@@ -257,31 +259,32 @@ struct FacebookLogo: View {
     var size: CGFloat = 40
     var body: some View {
         Canvas { ctx, sz in
+            let s = sz.width
             ctx.fill(
-                Path(roundedRect: CGRect(origin: .zero, size: CGSize(width: sz, height: sz)),
-                     cornerRadius: sz * 0.25),
+                Path(roundedRect: CGRect(origin: .zero, size: sz),
+                     cornerRadius: s * 0.25),
                 with: .color(Color(red: 0.094, green: 0.467, blue: 0.949))
             )
             // f shape
             var f = Path()
             // Vertical stem
-            f.move(to: CGPoint(x: sz*0.50, y: sz*0.38))
-            f.addLine(to: CGPoint(x: sz*0.50, y: sz*0.82))
-            ctx.stroke(f, with: .color(.white), style: StrokeStyle(lineWidth: sz*0.10, lineCap: .round))
+            f.move(to: CGPoint(x: s*0.50, y: s*0.38))
+            f.addLine(to: CGPoint(x: s*0.50, y: s*0.82))
+            ctx.stroke(f, with: .color(.white), style: StrokeStyle(lineWidth: s*0.10, lineCap: .round))
             // Cross bar
             var bar = Path()
-            bar.move(to: CGPoint(x: sz*0.36, y: sz*0.535))
-            bar.addLine(to: CGPoint(x: sz*0.62, y: sz*0.535))
-            ctx.stroke(bar, with: .color(.white), style: StrokeStyle(lineWidth: sz*0.09, lineCap: .round))
+            bar.move(to: CGPoint(x: s*0.36, y: s*0.535))
+            bar.addLine(to: CGPoint(x: s*0.62, y: s*0.535))
+            ctx.stroke(bar, with: .color(.white), style: StrokeStyle(lineWidth: s*0.09, lineCap: .round))
             // Top curve of f
             var curve = Path()
-            curve.move(to: CGPoint(x: sz*0.50, y: sz*0.38))
+            curve.move(to: CGPoint(x: s*0.50, y: s*0.38))
             curve.addCurve(
-                to: CGPoint(x: sz*0.66, y: sz*0.255),
-                control1: CGPoint(x: sz*0.50, y: sz*0.29),
-                control2: CGPoint(x: sz*0.66, y: sz*0.255)
+                to: CGPoint(x: s*0.66, y: s*0.255),
+                control1: CGPoint(x: s*0.50, y: s*0.29),
+                control2: CGPoint(x: s*0.66, y: s*0.255)
             )
-            ctx.stroke(curve, with: .color(.white), style: StrokeStyle(lineWidth: sz*0.09, lineCap: .round))
+            ctx.stroke(curve, with: .color(.white), style: StrokeStyle(lineWidth: s*0.09, lineCap: .round))
         }
         .frame(width: size, height: size)
     }

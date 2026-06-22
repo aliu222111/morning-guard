@@ -1,5 +1,6 @@
 #if os(iOS)
-import ShieldConfiguration
+import ManagedSettings
+import ManagedSettingsUI
 import UIKit
 
 class ShieldConfigurationExtension: ShieldConfigurationDataSource {
@@ -12,7 +13,7 @@ class ShieldConfigurationExtension: ShieldConfigurationDataSource {
 
     override func configuration(
         shielding application: Application,
-        in webDomain: WebDomain
+        in category: ActivityCategory
     ) -> ShieldConfiguration {
         return morningShieldConfiguration(appName: application.localizedDisplayName ?? "This app")
     }

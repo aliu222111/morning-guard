@@ -21,7 +21,7 @@ class MorningGuardMonitor: DeviceActivityMonitor {
         super.intervalDidEnd(for: activity)
         store.clearAllSettings()
 
-        let defaults = UserDefaults(suiteName: "group.com.morningguard.shared")
+        let defaults = UserDefaults(suiteName: "group.com.alexliu.morningguard")
         defaults?.set(false, forKey: "isGuardActive")
     }
 
