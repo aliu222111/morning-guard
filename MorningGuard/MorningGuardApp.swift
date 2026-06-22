@@ -1,17 +1,28 @@
-//
-//  MorningGuardApp.swift
-//  MorningGuard
-//
-//  Created by Alex Liu on 2026-03-30.
-//
-
 import SwiftUI
+import FamilyControls
 
 @main
 struct MorningGuardApp: App {
+    @StateObject private var appState = AppState()
+    @StateObject private var guardViewModel = GuardViewModel()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Group {
+                if appState.hasCompletedOnboarding {
+                    ContentView()
+                        .environmentObject(guardViewModel)
+                        .environmentObject(appState)
+                } else {
+                    OnboardingView()
+                        .environmentObject(guardViewModel)
+                        .environmentObject(appState)
+                }
+            }
+            .task {
+                // Request FamilyControls authorization on launch
+                await guardViewModel.requestAuthorization()
+            }
         }
     }
 }
