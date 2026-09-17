@@ -8,34 +8,58 @@
 
 /* Begin PBXBuildFile section */
 		017273C874BE95FACE6709A1 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6C056AAB0CD28D22F13459 /* OnboardingView.swift */; };
+		05062A2A8D5156F3DB08EF7E /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DA12FB55C3614D68432B08C /* Raleway-Medium.ttf */; };
 		061160A23C6D9C34A9A26244 /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50DC86C7F1E9546E9949CBD /* ManagedSettings.framework */; };
 		0691DABC46A645CE32071804 /* Color+MorningGuard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46C240DE4D283974FD57A27 /* Color+MorningGuard.swift */; };
+		070BD9F0C12B7216247D71A4 /* SpeechService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC39C11FBC0497C7A6C9CBD1 /* SpeechService.swift */; };
+		0BCFCF62E0CE36FD4918763E /* MorningRoutineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F36941EC95851F68242A3B3 /* MorningRoutineView.swift */; };
 		0D36986215691FA6A6B8606F /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50DC86C7F1E9546E9949CBD /* ManagedSettings.framework */; };
+		0DC5AF478E79DFF4302D4703 /* Lora-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A0C28D8AB27BA97B79C5142D /* Lora-Regular.ttf */; };
+		15A243C7F829DD16A9F3D7DA /* RoutineStepViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16B3453E39DC09073E0B669 /* RoutineStepViews.swift */; };
 		1D7ABE88E3D55218B558AF44 /* ManagedSettingsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8A456134914D12B205E142 /* ManagedSettingsUI.framework */; };
+		1F93618F5BC80807EF00C0B9 /* StreakLedger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DA05AC9111142759A077F7 /* StreakLedger.swift */; };
 		235E3774DED21F027B9D6CA6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B44AD55003A428962B525C /* ContentView.swift */; };
+		33FAFA13D993A8DC1CDF3CC8 /* JournalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6493B2084B9B46FEE0A014E /* JournalStore.swift */; };
+		370F892809AD21947E836A88 /* GuidedRoutineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA73D96D7921336AF206CD9 /* GuidedRoutineView.swift */; };
 		39838EAEDDC02306160E4A1B /* MorningGuardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0330BD22B2E0AE54225793F /* MorningGuardApp.swift */; };
+		3D7BF749F016CAE1948089E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D13D0302B0E0D4D57BC0A619 /* Assets.xcassets */; };
 		3DFCBBB321B80A35CB84D7A0 /* MorningGuardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB55BDAAD9F1749580CAD8 /* MorningGuardUITests.swift */; };
 		41278D220998DF81CE3632AD /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42993978A265440269330EE9 /* AppState.swift */; };
+		480BCBC49CEC6A9C76C9C2E5 /* StreakLedger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DA05AC9111142759A077F7 /* StreakLedger.swift */; };
 		49EA12DD1BA0510ED324B6BC /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 58F8D3285385626C6BAF84B7 /* PrivacyInfo.xcprivacy */; };
 		5013F0B65671A019D28D5B1C /* FamilyControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF6E1B1BFE23A7F394439DF /* FamilyControls.framework */; };
 		53D4794DC6E1A0499F0DD0F7 /* ShieldConfigurationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F156255642C7F308A2003046 /* ShieldConfigurationExtension.swift */; };
+		612ECFC37AC7890F1ADF7A82 /* MorningGuardWidgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8E3562E777D43F52930332F7 /* MorningGuardWidgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6376242A6FEA43BBD68E0CDB /* SunlightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E2FB61C8A5897E7D8EFBE9 /* SunlightView.swift */; };
+		82A608B9FB1BD83B6ABF0E5F /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E75E9F253DC66AAA522846 /* WeatherService.swift */; };
 		871006D6B5FC19798D40E7D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC04609DE5D3A40C0470AA12 /* Assets.xcassets */; };
 		8D2E74B4A572DB7314498B10 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 58F8D3285385626C6BAF84B7 /* PrivacyInfo.xcprivacy */; };
 		8D9D545ED3E6B01E72E98417 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 58F8D3285385626C6BAF84B7 /* PrivacyInfo.xcprivacy */; };
 		97749590FB2673563D8B283A /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5BF375507AA45C1C348C4 /* NotificationService.swift */; };
 		9CB71067AF6E99DA3C078003 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC091F919A39A81DB01085A /* SettingsView.swift */; };
+		A2271F705439259B9BF7084F /* Affirmations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7337838747E5BAB02A9280D5 /* Affirmations.swift */; };
 		A35BF25DB4A0F5318A360BFC /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26F7B8A214D92CED4400BBB7 /* DeviceActivity.framework */; };
 		A429C8C23004555631708579 /* GuardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412D4AC1B9A0E9ADB88231E /* GuardViewModel.swift */; };
+		A4FF358FAB41973FDEEF638A /* MorningGuardWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F897184C8B39DCBF7B2E4D1 /* MorningGuardWidgets.swift */; };
 		A754581100C7EE7418DDD16B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6C25CB52B959E6049202FA /* HomeView.swift */; };
+		AC670C090ADADD50C1849606 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5576D25121A174FCC90E7072 /* WidgetKit.framework */; };
+		AF92155A8EE3E344BEE9F1DF /* RoutineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7AF4A79582FA6E30715BA3 /* RoutineModel.swift */; };
+		B118E902FA9E33E3A31D4956 /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F29901CC4A171A026EEBFACE /* Raleway-SemiBold.ttf */; };
+		B5BABB2B3C78B64A3D8E609B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FD70315506D0C813B67CFF /* SwiftUI.framework */; };
 		C9CC6E0CB4518843E1B1E11A /* MorningGuardMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC7EAB0DAC4FECC8180EC5 /* MorningGuardMonitor.swift */; };
+		CE520FDB67A3C04EBD9CA0AE /* AffirmationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFDA68A75C3A3E6184085A5 /* AffirmationsView.swift */; };
+		DBEAC351BDB1C2FD78BF4225 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 58F8D3285385626C6BAF84B7 /* PrivacyInfo.xcprivacy */; };
 		E87E96F85AF37977B0C19DC8 /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50DC86C7F1E9546E9949CBD /* ManagedSettings.framework */; };
 		EC51F0002B196B8FA7D92B0F /* MorningGuardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564991B79F2BFB0B93DB6438 /* MorningGuardUITestsLaunchTests.swift */; };
 		EED35A627DCE21A9FCCC14CE /* GuardSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F90B805445AC5BD8410064 /* GuardSetupView.swift */; };
+		EF637438DCBA1A65BAC4FE06 /* StreakLedger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DA05AC9111142759A077F7 /* StreakLedger.swift */; };
 		F02C2D9A2C935A1F023404BD /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26F7B8A214D92CED4400BBB7 /* DeviceActivity.framework */; };
+		F0C221729DB7110460475CA0 /* FamilyControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF6E1B1BFE23A7F394439DF /* FamilyControls.framework */; };
 		F1D2CBE5CF69A9486DB81361 /* MorningGuardExtension MorningGuardExtension MorningGuardExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9B0DDEB24122FCCBBD177CDA /* MorningGuardExtension MorningGuardExtension MorningGuardExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F2E5C29BCF0123C298B95E0A /* MorningGuardShield.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8DF7D1FA8FDF40E46E7EFDFC /* MorningGuardShield.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F966922620CE41934B173B54 /* ManagedSettingsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8A456134914D12B205E142 /* ManagedSettingsUI.framework */; };
 		FB38AEB361AC9C03F693DCA0 /* MorningGuardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04898C4083FA5C816DF9016B /* MorningGuardTests.swift */; };
+		FD2B3B4370684AFBD5625A16 /* JournalPrompts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAFE45B4596E94A1405F247 /* JournalPrompts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +76,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 9D596A6BCB0BC3D4D1FE0C5D;
 			remoteInfo = MorningGuardShield;
+		};
+		6488AFE944D6470F19651053 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E863610A43787F0655F96B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B675FDBBBD42E20BB64A27C;
+			remoteInfo = MorningGuardWidgets;
 		};
 		D1D0CCF26F321ED6B39144B8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -78,6 +109,7 @@
 			files = (
 				F1D2CBE5CF69A9486DB81361 /* MorningGuardExtension MorningGuardExtension MorningGuardExtension.appex in Embed Foundation Extensions */,
 				F2E5C29BCF0123C298B95E0A /* MorningGuardShield.appex in Embed Foundation Extensions */,
+				612ECFC37AC7890F1ADF7A82 /* MorningGuardWidgets.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,32 +118,52 @@
 
 /* Begin PBXFileReference section */
 		04898C4083FA5C816DF9016B /* MorningGuardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningGuardTests.swift; sourceTree = "<group>"; };
+		0F897184C8B39DCBF7B2E4D1 /* MorningGuardWidgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningGuardWidgets.swift; sourceTree = "<group>"; };
 		13F90B805445AC5BD8410064 /* GuardSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardSetupView.swift; sourceTree = "<group>"; };
 		14BB55BDAAD9F1749580CAD8 /* MorningGuardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningGuardUITests.swift; sourceTree = "<group>"; };
 		1EC091F919A39A81DB01085A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		26F7B8A214D92CED4400BBB7 /* DeviceActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceActivity.framework; path = System/Library/Frameworks/DeviceActivity.framework; sourceTree = SDKROOT; };
 		42993978A265440269330EE9 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		44DA05AC9111142759A077F7 /* StreakLedger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakLedger.swift; sourceTree = "<group>"; };
 		4C6C056AAB0CD28D22F13459 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		5576D25121A174FCC90E7072 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		55B44AD55003A428962B525C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		564991B79F2BFB0B93DB6438 /* MorningGuardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningGuardUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		58F8D3285385626C6BAF84B7 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		59FD70315506D0C813B67CFF /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		5F36941EC95851F68242A3B3 /* MorningRoutineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningRoutineView.swift; sourceTree = "<group>"; };
+		7337838747E5BAB02A9280D5 /* Affirmations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Affirmations.swift; sourceTree = "<group>"; };
 		7B8A456134914D12B205E142 /* ManagedSettingsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManagedSettingsUI.framework; path = System/Library/Frameworks/ManagedSettingsUI.framework; sourceTree = SDKROOT; };
 		8AF6E1B1BFE23A7F394439DF /* FamilyControls.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FamilyControls.framework; path = System/Library/Frameworks/FamilyControls.framework; sourceTree = SDKROOT; };
+		8DA12FB55C3614D68432B08C /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Medium.ttf"; sourceTree = "<group>"; };
 		8DD5BF375507AA45C1C348C4 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		8DF7D1FA8FDF40E46E7EFDFC /* MorningGuardShield.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = MorningGuardShield.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E3562E777D43F52930332F7 /* MorningGuardWidgets.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = MorningGuardWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D9266C4AF969C46EE56AC0 /* MorningGuard.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = MorningGuard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B0DDEB24122FCCBBD177CDA /* MorningGuardExtension MorningGuardExtension MorningGuardExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = "MorningGuardExtension MorningGuardExtension MorningGuardExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CFDA68A75C3A3E6184085A5 /* AffirmationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffirmationsView.swift; sourceTree = "<group>"; };
+		A0C28D8AB27BA97B79C5142D /* Lora-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Regular.ttf"; sourceTree = "<group>"; };
 		A412D4AC1B9A0E9ADB88231E /* GuardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardViewModel.swift; sourceTree = "<group>"; };
 		A89C5EF2A07B4BA7A5FE8C0D /* MorningGuardExtension MorningGuardExtension MorningGuardExtension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MorningGuardExtension MorningGuardExtension MorningGuardExtension-Bridging-Header.h"; sourceTree = "<group>"; };
+		AC39C11FBC0497C7A6C9CBD1 /* SpeechService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechService.swift; sourceTree = "<group>"; };
+		AFA73D96D7921336AF206CD9 /* GuidedRoutineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidedRoutineView.swift; sourceTree = "<group>"; };
 		B0330BD22B2E0AE54225793F /* MorningGuardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningGuardApp.swift; sourceTree = "<group>"; };
+		B6493B2084B9B46FEE0A014E /* JournalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalStore.swift; sourceTree = "<group>"; };
 		BCFC7EAB0DAC4FECC8180EC5 /* MorningGuardMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningGuardMonitor.swift; sourceTree = "<group>"; };
 		BD079805A648EDADBBF3BC74 /* MorningGuardTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MorningGuardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2E2FB61C8A5897E7D8EFBE9 /* SunlightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunlightView.swift; sourceTree = "<group>"; };
 		C46C240DE4D283974FD57A27 /* Color+MorningGuard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+MorningGuard.swift"; sourceTree = "<group>"; };
 		CC04609DE5D3A40C0470AA12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D13D0302B0E0D4D57BC0A619 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D7E75E9F253DC66AAA522846 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		DD7AF4A79582FA6E30715BA3 /* RoutineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineModel.swift; sourceTree = "<group>"; };
 		DF6C25CB52B959E6049202FA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E3EB7DE3884F0BA5AA7DC205 /* MorningGuardUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MorningGuardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E50DC86C7F1E9546E9949CBD /* ManagedSettings.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManagedSettings.framework; path = System/Library/Frameworks/ManagedSettings.framework; sourceTree = SDKROOT; };
 		F156255642C7F308A2003046 /* ShieldConfigurationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldConfigurationExtension.swift; sourceTree = "<group>"; };
+		F16B3453E39DC09073E0B669 /* RoutineStepViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineStepViews.swift; sourceTree = "<group>"; };
+		F29901CC4A171A026EEBFACE /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
+		FFAFE45B4596E94A1405F247 /* JournalPrompts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalPrompts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +184,7 @@
 			files = (
 				F02C2D9A2C935A1F023404BD /* DeviceActivity.framework in Frameworks */,
 				0D36986215691FA6A6B8606F /* ManagedSettings.framework in Frameworks */,
+				F0C221729DB7110460475CA0 /* FamilyControls.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +194,15 @@
 			files = (
 				E87E96F85AF37977B0C19DC8 /* ManagedSettings.framework in Frameworks */,
 				1D7ABE88E3D55218B558AF44 /* ManagedSettingsUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB57C1A656443E80A2197F8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC670C090ADADD50C1849606 /* WidgetKit.framework in Frameworks */,
+				B5BABB2B3C78B64A3D8E609B /* SwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +217,7 @@
 				92960A508653D4C05F3BA95F /* MorningGuardShield */,
 				4CFBFE5AA2AF26EAB1485C2F /* MorningGuardTests */,
 				BD9F1A03351E0AD73DEB86DB /* MorningGuardUITests */,
+				A87E23B9990B1988F5D7265A /* MorningGuardWidgets */,
 				B063A747F4417574B3D55E92 /* Frameworks */,
 				1696B73879BB79C39B03B580 /* Products */,
 			);
@@ -168,6 +231,7 @@
 				8DF7D1FA8FDF40E46E7EFDFC /* MorningGuardShield.appex */,
 				BD079805A648EDADBBF3BC74 /* MorningGuardTests.xctest */,
 				E3EB7DE3884F0BA5AA7DC205 /* MorningGuardUITests.xctest */,
+				8E3562E777D43F52930332F7 /* MorningGuardWidgets.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -175,20 +239,43 @@
 		24B03B881FD2DB32CFAA50F3 /* MorningGuard */ = {
 			isa = PBXGroup;
 			children = (
+				7337838747E5BAB02A9280D5 /* Affirmations.swift */,
+				9CFDA68A75C3A3E6184085A5 /* AffirmationsView.swift */,
 				42993978A265440269330EE9 /* AppState.swift */,
 				CC04609DE5D3A40C0470AA12 /* Assets.xcassets */,
 				C46C240DE4D283974FD57A27 /* Color+MorningGuard.swift */,
 				55B44AD55003A428962B525C /* ContentView.swift */,
 				13F90B805445AC5BD8410064 /* GuardSetupView.swift */,
 				A412D4AC1B9A0E9ADB88231E /* GuardViewModel.swift */,
+				AFA73D96D7921336AF206CD9 /* GuidedRoutineView.swift */,
 				DF6C25CB52B959E6049202FA /* HomeView.swift */,
+				FFAFE45B4596E94A1405F247 /* JournalPrompts.swift */,
+				B6493B2084B9B46FEE0A014E /* JournalStore.swift */,
 				B0330BD22B2E0AE54225793F /* MorningGuardApp.swift */,
+				5F36941EC95851F68242A3B3 /* MorningRoutineView.swift */,
 				8DD5BF375507AA45C1C348C4 /* NotificationService.swift */,
 				4C6C056AAB0CD28D22F13459 /* OnboardingView.swift */,
 				58F8D3285385626C6BAF84B7 /* PrivacyInfo.xcprivacy */,
+				DD7AF4A79582FA6E30715BA3 /* RoutineModel.swift */,
+				F16B3453E39DC09073E0B669 /* RoutineStepViews.swift */,
 				1EC091F919A39A81DB01085A /* SettingsView.swift */,
+				AC39C11FBC0497C7A6C9CBD1 /* SpeechService.swift */,
+				44DA05AC9111142759A077F7 /* StreakLedger.swift */,
+				C2E2FB61C8A5897E7D8EFBE9 /* SunlightView.swift */,
+				D7E75E9F253DC66AAA522846 /* WeatherService.swift */,
+				2E061554E45FE1BD8EA4B248 /* Fonts */,
 			);
 			path = MorningGuard;
+			sourceTree = "<group>";
+		};
+		2E061554E45FE1BD8EA4B248 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A0C28D8AB27BA97B79C5142D /* Lora-Regular.ttf */,
+				8DA12FB55C3614D68432B08C /* Raleway-Medium.ttf */,
+				F29901CC4A171A026EEBFACE /* Raleway-SemiBold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		4CFBFE5AA2AF26EAB1485C2F /* MorningGuardTests */ = {
@@ -216,6 +303,15 @@
 			path = "MorningGuardExtension MorningGuardExtension MorningGuardExtension";
 			sourceTree = "<group>";
 		};
+		A87E23B9990B1988F5D7265A /* MorningGuardWidgets */ = {
+			isa = PBXGroup;
+			children = (
+				D13D0302B0E0D4D57BC0A619 /* Assets.xcassets */,
+				0F897184C8B39DCBF7B2E4D1 /* MorningGuardWidgets.swift */,
+			);
+			path = MorningGuardWidgets;
+			sourceTree = "<group>";
+		};
 		B063A747F4417574B3D55E92 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +319,8 @@
 				8AF6E1B1BFE23A7F394439DF /* FamilyControls.framework */,
 				E50DC86C7F1E9546E9949CBD /* ManagedSettings.framework */,
 				7B8A456134914D12B205E142 /* ManagedSettingsUI.framework */,
+				59FD70315506D0C813B67CFF /* SwiftUI.framework */,
+				5576D25121A174FCC90E7072 /* WidgetKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -253,6 +351,7 @@
 			dependencies = (
 				D3FA0365BBA196AC1686AA66 /* PBXTargetDependency */,
 				E4E610CEB314A064FD0928B5 /* PBXTargetDependency */,
+				850BB285B449E77BD07B6B5C /* PBXTargetDependency */,
 			);
 			name = MorningGuard;
 			packageProductDependencies = (
@@ -260,6 +359,25 @@
 			productName = MorningGuard;
 			productReference = 90D9266C4AF969C46EE56AC0 /* MorningGuard.app */;
 			productType = "com.apple.product-type.application";
+		};
+		6B675FDBBBD42E20BB64A27C /* MorningGuardWidgets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25B7214E7EE1E7CF8FDDAA22 /* Build configuration list for PBXNativeTarget "MorningGuardWidgets" */;
+			buildPhases = (
+				55BFDC34CC89CECA4BF47D5D /* Sources */,
+				1232D2220CC7B023E4E5675F /* Resources */,
+				CB57C1A656443E80A2197F8E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MorningGuardWidgets;
+			packageProductDependencies = (
+			);
+			productName = MorningGuardWidgets;
+			productReference = 8E3562E777D43F52930332F7 /* MorningGuardWidgets.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 		9D596A6BCB0BC3D4D1FE0C5D /* MorningGuardShield */ = {
 			isa = PBXNativeTarget;
@@ -348,11 +466,16 @@
 						DevelopmentTeam = 42N6589XL7;
 						ProvisioningStyle = Automatic;
 					};
+					6B675FDBBBD42E20BB64A27C = {
+						DevelopmentTeam = 42N6589XL7;
+						ProvisioningStyle = Automatic;
+					};
 					9D596A6BCB0BC3D4D1FE0C5D = {
 						DevelopmentTeam = 42N6589XL7;
 						ProvisioningStyle = Automatic;
 					};
 					CD48573D83627C96415FB7CD = {
+						DevelopmentTeam = 42N6589XL7;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 5E76A4FAE1ADB41855E99DAC;
 					};
@@ -361,6 +484,7 @@
 						ProvisioningStyle = Automatic;
 					};
 					F94BCAEE0DD398A2A379BA84 = {
+						DevelopmentTeam = 42N6589XL7;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -384,6 +508,7 @@
 				9D596A6BCB0BC3D4D1FE0C5D /* MorningGuardShield */,
 				F94BCAEE0DD398A2A379BA84 /* MorningGuardTests */,
 				CD48573D83627C96415FB7CD /* MorningGuardUITests */,
+				6B675FDBBBD42E20BB64A27C /* MorningGuardWidgets */,
 			);
 		};
 /* End PBXProject section */
@@ -397,12 +522,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1232D2220CC7B023E4E5675F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D7BF749F016CAE1948089E4 /* Assets.xcassets in Resources */,
+				DBEAC351BDB1C2FD78BF4225 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E880AE7FFB61220F3D34F35 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				871006D6B5FC19798D40E7D3 /* Assets.xcassets in Resources */,
+				0DC5AF478E79DFF4302D4703 /* Lora-Regular.ttf in Resources */,
 				49EA12DD1BA0510ED324B6BC /* PrivacyInfo.xcprivacy in Resources */,
+				05062A2A8D5156F3DB08EF7E /* Raleway-Medium.ttf in Resources */,
+				B118E902FA9E33E3A31D4956 /* Raleway-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +559,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9CC6E0CB4518843E1B1E11A /* MorningGuardMonitor.swift in Sources */,
+				1F93618F5BC80807EF00C0B9 /* StreakLedger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,16 +567,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2271F705439259B9BF7084F /* Affirmations.swift in Sources */,
+				CE520FDB67A3C04EBD9CA0AE /* AffirmationsView.swift in Sources */,
 				41278D220998DF81CE3632AD /* AppState.swift in Sources */,
 				0691DABC46A645CE32071804 /* Color+MorningGuard.swift in Sources */,
 				235E3774DED21F027B9D6CA6 /* ContentView.swift in Sources */,
 				EED35A627DCE21A9FCCC14CE /* GuardSetupView.swift in Sources */,
 				A429C8C23004555631708579 /* GuardViewModel.swift in Sources */,
+				370F892809AD21947E836A88 /* GuidedRoutineView.swift in Sources */,
 				A754581100C7EE7418DDD16B /* HomeView.swift in Sources */,
+				FD2B3B4370684AFBD5625A16 /* JournalPrompts.swift in Sources */,
+				33FAFA13D993A8DC1CDF3CC8 /* JournalStore.swift in Sources */,
 				39838EAEDDC02306160E4A1B /* MorningGuardApp.swift in Sources */,
+				0BCFCF62E0CE36FD4918763E /* MorningRoutineView.swift in Sources */,
 				97749590FB2673563D8B283A /* NotificationService.swift in Sources */,
 				017273C874BE95FACE6709A1 /* OnboardingView.swift in Sources */,
+				AF92155A8EE3E344BEE9F1DF /* RoutineModel.swift in Sources */,
+				15A243C7F829DD16A9F3D7DA /* RoutineStepViews.swift in Sources */,
 				9CB71067AF6E99DA3C078003 /* SettingsView.swift in Sources */,
+				070BD9F0C12B7216247D71A4 /* SpeechService.swift in Sources */,
+				EF637438DCBA1A65BAC4FE06 /* StreakLedger.swift in Sources */,
+				6376242A6FEA43BBD68E0CDB /* SunlightView.swift in Sources */,
+				82A608B9FB1BD83B6ABF0E5F /* WeatherService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +608,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		55BFDC34CC89CECA4BF47D5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4FF358FAB41973FDEEF638A /* MorningGuardWidgets.swift in Sources */,
+				480BCBC49CEC6A9C76C9C2E5 /* StreakLedger.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EE7FB3666DE35F4862411188 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -470,6 +629,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		850BB285B449E77BD07B6B5C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B675FDBBBD42E20BB64A27C /* MorningGuardWidgets */;
+			targetProxy = 6488AFE944D6470F19651053 /* PBXContainerItemProxy */;
+		};
 		A6513F253E8467AE49EC4917 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5E76A4FAE1ADB41855E99DAC /* MorningGuard */;
@@ -499,13 +663,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "MorningGuardExtension MorningGuardExtension MorningGuardExtension/MorningGuardExtension_MorningGuardExtension_MorningGuardExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 42N6589XL7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MorningGuardExtension MorningGuardExtension MorningGuardExtension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "MorningGuardExtension MorningGuardExtension MorningGuardExtension";
+				INFOPLIST_KEY_CFBundleDisplayName = "Morning Guard Monitor";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -525,7 +689,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "MorningGuardExtension MorningGuardExtension MorningGuardExtension/MorningGuardExtension MorningGuardExtension MorningGuardExtension-Bridging-Header.h";
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -534,6 +698,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_OPTIMIZATION = space;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -564,6 +729,8 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 2;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -578,10 +745,12 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
@@ -593,15 +762,15 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 42N6589XL7;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 26.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alex.MorningGuardTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -612,26 +781,61 @@
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MorningGuard.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MorningGuard";
-				XROS_DEPLOYMENT_TARGET = 26.2;
 			};
 			name = Release;
+		};
+		5B84F356E727EA543C5FB22E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MorningGuardWidgets/MorningGuardWidgets.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 42N6589XL7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MorningGuardWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Morning Guard Widgets";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alex.MorningGuard.MorningGuardWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
 		};
 		61CAA8145AABFC9B0C872F74 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 42N6589XL7;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 26.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alex.MorningGuardTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -642,9 +846,8 @@
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MorningGuard.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MorningGuard";
-				XROS_DEPLOYMENT_TARGET = 26.2;
 			};
 			name = Debug;
 		};
@@ -657,26 +860,33 @@
 				CODE_SIGN_ENTITLEMENTS = MorningGuard/MorningGuard.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 42N6589XL7;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Morning Guard uses the camera to measure ambient light levels for your morning sunlight routine.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Morning Guard uses your location to show your local weather.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Morning Guard uses the microphone to let you dictate your journal entries by voice.";
+				INFOPLIST_KEY_NSMotionUsageDescription = "Morning Guard uses motion data to detect which way your phone is facing so the correct camera can measure light levels.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Morning Guard uses speech recognition to transcribe your voice into journal text.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_BackgroundColorName[sdk=iphoneos*]" = MorningCream;
+				"INFOPLIST_KEY_UILaunchScreen_BackgroundColorName[sdk=iphonesimulator*]" = MorningCream;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 26.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alex.MorningGuard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -689,25 +899,59 @@
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				XROS_DEPLOYMENT_TARGET = 26.2;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
+		};
+		841BE4910E5FE3CA4BC7992F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MorningGuardWidgets/MorningGuardWidgets.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 42N6589XL7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MorningGuardWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Morning Guard Widgets";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alex.MorningGuard.MorningGuardWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
 		};
 		98BDF0D2F29E37966822D4FC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 42N6589XL7;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 26.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alex.MorningGuardUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -718,9 +962,8 @@
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = MorningGuard;
-				XROS_DEPLOYMENT_TARGET = 26.2;
 			};
 			name = Release;
 		};
@@ -730,7 +973,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = MorningGuardShield/MorningGuardShield.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 42N6589XL7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MorningGuardShield/Info.plist;
@@ -755,7 +998,7 @@
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -765,13 +1008,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "MorningGuardExtension MorningGuardExtension MorningGuardExtension/MorningGuardExtension_MorningGuardExtension_MorningGuardExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 42N6589XL7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MorningGuardExtension MorningGuardExtension MorningGuardExtension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "MorningGuardExtension MorningGuardExtension MorningGuardExtension";
+				INFOPLIST_KEY_CFBundleDisplayName = "Morning Guard Monitor";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -792,7 +1035,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "MorningGuardExtension MorningGuardExtension MorningGuardExtension/MorningGuardExtension MorningGuardExtension MorningGuardExtension-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -802,7 +1045,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = MorningGuardShield/MorningGuardShield.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 42N6589XL7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MorningGuardShield/Info.plist;
@@ -828,7 +1071,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -837,15 +1080,15 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 42N6589XL7;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 26.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alex.MorningGuardUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -856,9 +1099,8 @@
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = MorningGuard;
-				XROS_DEPLOYMENT_TARGET = 26.2;
 			};
 			name = Debug;
 		};
@@ -871,26 +1113,33 @@
 				CODE_SIGN_ENTITLEMENTS = MorningGuard/MorningGuard.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 42N6589XL7;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Morning Guard uses the camera to measure ambient light levels for your morning sunlight routine.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Morning Guard uses your location to show your local weather.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Morning Guard uses the microphone to let you dictate your journal entries by voice.";
+				INFOPLIST_KEY_NSMotionUsageDescription = "Morning Guard uses motion data to detect which way your phone is facing so the correct camera can measure light levels.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Morning Guard uses speech recognition to transcribe your voice into journal text.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_BackgroundColorName[sdk=iphoneos*]" = MorningCream;
+				"INFOPLIST_KEY_UILaunchScreen_BackgroundColorName[sdk=iphonesimulator*]" = MorningCream;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 26.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alex.MorningGuard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -903,8 +1152,7 @@
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				XROS_DEPLOYMENT_TARGET = 26.2;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -943,6 +1191,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -963,6 +1212,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -991,6 +1241,15 @@
 			buildConfigurations = (
 				A757973F1FBCFDAB6DC807C9 /* Debug */,
 				1A6B42B89802B2A31922D5F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		25B7214E7EE1E7CF8FDDAA22 /* Build configuration list for PBXNativeTarget "MorningGuardWidgets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B84F356E727EA543C5FB22E /* Debug */,
+				841BE4910E5FE3CA4BC7992F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

@@ -7,11 +7,11 @@ schemes:
         MorningGuard: all
         "MorningGuardExtension MorningGuardExtension MorningGuardExtension": all
         MorningGuardShield: all
+        MorningGuardWidgets: all
         MorningGuardTests: [test]
         MorningGuardUITests: [test]
     run:
       config: Debug
-      storeKitConfiguration: MorningGuard/MorningGuard.storekit
     test:
       config: Debug
       targets:
@@ -34,6 +34,11 @@ options:
 # Project-level build settings (mirrors the global XCBuildConfiguration in .pbxproj)
 settings:
   base:
+    # App version + build, shared by every target. Change these in one place,
+    # then run `xcodegen generate`. Version = public App Store version (1.0, 1.1…);
+    # Build = a unique, always-increasing number for each App Store Connect upload.
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "2"
     ALWAYS_SEARCH_USER_PATHS: NO
     ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS: YES
     CLANG_ANALYZER_NONNULL: YES
@@ -96,6 +101,10 @@ settings:
       ENABLE_NS_ASSERTIONS: NO
       MTL_ENABLE_DEBUG_INFO: NO
       SWIFT_COMPILATION_MODE: wholemodule
+      SWIFT_OPTIMIZATION_LEVEL: "-O"
+      DEAD_CODE_STRIPPING: YES
+      STRIP_INSTALLED_PRODUCT: YES
+      ASSETCATALOG_COMPILER_OPTIMIZATION: space
 
 targets:
 
@@ -108,14 +117,13 @@ targets:
       - path: MorningGuard
         excludes:
           - "**/*.entitlements"
-          - "**/*.storekit"
     settings:
       base:
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
         CODE_SIGN_ENTITLEMENTS: MorningGuard/MorningGuard.entitlements
         CODE_SIGN_STYLE: Automatic
-        CURRENT_PROJECT_VERSION: 1
+        CURRENT_PROJECT_VERSION: 2
         DEVELOPMENT_TEAM: 42N6589XL7
         ENABLE_APP_SANDBOX: YES
         ENABLE_PREVIEWS: YES
@@ -127,18 +135,25 @@ targets:
         "INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]": YES
         "INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]": YES
         "INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]": YES
+        "INFOPLIST_KEY_UILaunchScreen_BackgroundColorName[sdk=iphoneos*]": MorningCream
+        "INFOPLIST_KEY_UILaunchScreen_BackgroundColorName[sdk=iphonesimulator*]": MorningCream
         "INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]": UIStatusBarStyleDefault
         "INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]": UIStatusBarStyleDefault
         INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
-        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: UIInterfaceOrientationPortrait
         IPHONEOS_DEPLOYMENT_TARGET: "17.6"
         LD_RUNPATH_SEARCH_PATHS: "@executable_path/Frameworks"
         "LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]": "@executable_path/../Frameworks"
-        MACOSX_DEPLOYMENT_TARGET: "26.2"
         MARKETING_VERSION: "1.0"
         PRODUCT_BUNDLE_IDENTIFIER: com.alex.MorningGuard
         PRODUCT_NAME: "$(TARGET_NAME)"
         ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS: NO
+        INFOPLIST_KEY_NSCameraUsageDescription: "Morning Guard uses the camera to measure ambient light levels for your morning sunlight routine."
+        INFOPLIST_KEY_NSMicrophoneUsageDescription: "Morning Guard uses the microphone to let you dictate your journal entries by voice."
+        INFOPLIST_KEY_NSSpeechRecognitionUsageDescription: "Morning Guard uses speech recognition to transcribe your voice into journal text."
+        INFOPLIST_KEY_NSLocationWhenInUseUsageDescription: "Morning Guard uses your location to show your local weather."
+        INFOPLIST_KEY_NSMotionUsageDescription: "Morning Guard uses motion data to detect which way your phone is facing so the correct camera can measure light levels."
+        INFOPLIST_KEY_ITSAppUsesNonExemptEncryption: NO
         REGISTER_APP_GROUPS: YES
         SDKROOT: auto
         STRING_CATALOG_GENERATE_SYMBOLS: YES
@@ -148,13 +163,14 @@ targets:
         SWIFT_DEFAULT_ACTOR_ISOLATION: MainActor
         SWIFT_EMIT_LOC_STRINGS: YES
         SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY: YES
-        TARGETED_DEVICE_FAMILY: "1,2"
-        XROS_DEPLOYMENT_TARGET: "26.2"
+        TARGETED_DEVICE_FAMILY: "1"
     dependencies:
       # Extensions embedded in the app bundle
       - target: "MorningGuardExtension MorningGuardExtension MorningGuardExtension"
         embed: true
       - target: MorningGuardShield
+        embed: true
+      - target: MorningGuardWidgets
         embed: true
       # Screen Time frameworks
       - sdk: FamilyControls.framework
@@ -166,25 +182,26 @@ targets:
   "MorningGuardExtension MorningGuardExtension MorningGuardExtension":
     type: app-extension
     platform: iOS
-    deploymentTarget: "26.2"
+    deploymentTarget: "17.6"
     sources:
       - path: "MorningGuardExtension MorningGuardExtension MorningGuardExtension"
         excludes:
           - "Info.plist"
           - "**/*.entitlements"
       - path: MorningGuard/PrivacyInfo.xcprivacy
+      - path: MorningGuard/StreakLedger.swift
     settings:
       base:
         CLANG_ENABLE_MODULES: YES
         CODE_SIGN_ENTITLEMENTS: "MorningGuardExtension MorningGuardExtension MorningGuardExtension/MorningGuardExtension_MorningGuardExtension_MorningGuardExtension.entitlements"
         CODE_SIGN_STYLE: Automatic
-        CURRENT_PROJECT_VERSION: 1
+        CURRENT_PROJECT_VERSION: 2
         DEVELOPMENT_TEAM: 42N6589XL7
         GENERATE_INFOPLIST_FILE: YES
         INFOPLIST_FILE: "MorningGuardExtension MorningGuardExtension MorningGuardExtension/Info.plist"
-        INFOPLIST_KEY_CFBundleDisplayName: "MorningGuardExtension MorningGuardExtension MorningGuardExtension"
+        INFOPLIST_KEY_CFBundleDisplayName: "Morning Guard Monitor"
         INFOPLIST_KEY_NSHumanReadableCopyright: ""
-        IPHONEOS_DEPLOYMENT_TARGET: "26.2"
+        IPHONEOS_DEPLOYMENT_TARGET: "17.6"
         LD_RUNPATH_SEARCH_PATHS:
           - "$(inherited)"
           - "@executable_path/Frameworks"
@@ -203,13 +220,14 @@ targets:
         SWIFT_EMIT_LOC_STRINGS: YES
         SWIFT_OBJC_BRIDGING_HEADER: "MorningGuardExtension MorningGuardExtension MorningGuardExtension/MorningGuardExtension MorningGuardExtension MorningGuardExtension-Bridging-Header.h"
         SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY: YES
-        TARGETED_DEVICE_FAMILY: "1,2"
+        TARGETED_DEVICE_FAMILY: "1"
       configs:
         Debug:
           SWIFT_OPTIMIZATION_LEVEL: "-Onone"
     dependencies:
       - sdk: DeviceActivity.framework
       - sdk: ManagedSettings.framework
+      - sdk: FamilyControls.framework
 
   # ── ShieldConfiguration extension ─────────────────────────────────────────
   MorningGuardShield:
@@ -227,7 +245,7 @@ targets:
         CLANG_ENABLE_MODULES: YES
         CODE_SIGN_ENTITLEMENTS: MorningGuardShield/MorningGuardShield.entitlements
         CODE_SIGN_STYLE: Automatic
-        CURRENT_PROJECT_VERSION: 1
+        CURRENT_PROJECT_VERSION: 2
         DEVELOPMENT_TEAM: 42N6589XL7
         GENERATE_INFOPLIST_FILE: YES
         INFOPLIST_FILE: MorningGuardShield/Info.plist
@@ -251,7 +269,7 @@ targets:
         SWIFT_APPROACHABLE_CONCURRENCY: YES
         SWIFT_EMIT_LOC_STRINGS: YES
         SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY: YES
-        TARGETED_DEVICE_FAMILY: "1,2"
+        TARGETED_DEVICE_FAMILY: "1"
       configs:
         Debug:
           SWIFT_OPTIMIZATION_LEVEL: "-Onone"
@@ -259,21 +277,70 @@ targets:
       - sdk: ManagedSettings.framework
       - sdk: ManagedSettingsUI.framework
 
+  # ── WidgetKit extension ───────────────────────────────────────────────────
+  MorningGuardWidgets:
+    type: app-extension
+    platform: iOS
+    deploymentTarget: "17.6"
+    sources:
+      - path: MorningGuardWidgets
+        excludes:
+          - "Info.plist"
+          - "**/*.entitlements"
+      - path: MorningGuard/PrivacyInfo.xcprivacy
+      - path: MorningGuard/StreakLedger.swift
+    settings:
+      base:
+        CLANG_ENABLE_MODULES: YES
+        CODE_SIGN_ENTITLEMENTS: MorningGuardWidgets/MorningGuardWidgets.entitlements
+        CODE_SIGN_STYLE: Automatic
+        CURRENT_PROJECT_VERSION: 2
+        DEVELOPMENT_TEAM: 42N6589XL7
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_FILE: MorningGuardWidgets/Info.plist
+        INFOPLIST_KEY_CFBundleDisplayName: "Morning Guard Widgets"
+        INFOPLIST_KEY_NSHumanReadableCopyright: ""
+        IPHONEOS_DEPLOYMENT_TARGET: "17.6"
+        LD_RUNPATH_SEARCH_PATHS:
+          - "$(inherited)"
+          - "@executable_path/Frameworks"
+          - "@executable_path/../../Frameworks"
+        MARKETING_VERSION: "1.0"
+        PRODUCT_BUNDLE_IDENTIFIER: com.alex.MorningGuard.MorningGuardWidgets
+        PRODUCT_NAME: "$(TARGET_NAME)"
+        SDKROOT: iphoneos
+        SKIP_INSTALL: YES
+        STRING_CATALOG_GENERATE_SYMBOLS: YES
+        SUPPORTED_PLATFORMS: "iphoneos iphonesimulator"
+        SUPPORTS_MACCATALYST: NO
+        SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD: NO
+        SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD: NO
+        SWIFT_APPROACHABLE_CONCURRENCY: YES
+        SWIFT_EMIT_LOC_STRINGS: YES
+        SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY: YES
+        TARGETED_DEVICE_FAMILY: "1"
+      configs:
+        Debug:
+          SWIFT_OPTIMIZATION_LEVEL: "-Onone"
+    dependencies:
+      - sdk: WidgetKit.framework
+      - sdk: SwiftUI.framework
+
   # ── Unit tests ────────────────────────────────────────────────────────────
   MorningGuardTests:
     type: bundle.unit-test
     platform: iOS
-    deploymentTarget: "26.2"
+    deploymentTarget: "17.6"
     sources:
       - path: MorningGuardTests
     settings:
       base:
         BUNDLE_LOADER: "$(TEST_HOST)"
         CODE_SIGN_STYLE: Automatic
-        CURRENT_PROJECT_VERSION: 1
+        CURRENT_PROJECT_VERSION: 2
+        DEVELOPMENT_TEAM: 42N6589XL7
         GENERATE_INFOPLIST_FILE: YES
-        IPHONEOS_DEPLOYMENT_TARGET: "26.2"
-        MACOSX_DEPLOYMENT_TARGET: "26.2"
+        IPHONEOS_DEPLOYMENT_TARGET: "17.6"
         MARKETING_VERSION: "1.0"
         PRODUCT_BUNDLE_IDENTIFIER: com.alex.MorningGuardTests
         PRODUCT_NAME: "$(TARGET_NAME)"
@@ -284,9 +351,8 @@ targets:
         SWIFT_APPROACHABLE_CONCURRENCY: YES
         SWIFT_EMIT_LOC_STRINGS: NO
         SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY: YES
-        TARGETED_DEVICE_FAMILY: "1,2"
+        TARGETED_DEVICE_FAMILY: "1"
         TEST_HOST: "$(BUILT_PRODUCTS_DIR)/MorningGuard.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MorningGuard"
-        XROS_DEPLOYMENT_TARGET: "26.2"
     dependencies:
       - target: MorningGuard
 
@@ -294,16 +360,16 @@ targets:
   MorningGuardUITests:
     type: bundle.ui-testing
     platform: iOS
-    deploymentTarget: "26.2"
+    deploymentTarget: "17.6"
     sources:
       - path: MorningGuardUITests
     settings:
       base:
         CODE_SIGN_STYLE: Automatic
-        CURRENT_PROJECT_VERSION: 1
+        CURRENT_PROJECT_VERSION: 2
+        DEVELOPMENT_TEAM: 42N6589XL7
         GENERATE_INFOPLIST_FILE: YES
-        IPHONEOS_DEPLOYMENT_TARGET: "26.2"
-        MACOSX_DEPLOYMENT_TARGET: "26.2"
+        IPHONEOS_DEPLOYMENT_TARGET: "17.6"
         MARKETING_VERSION: "1.0"
         PRODUCT_BUNDLE_IDENTIFIER: com.alex.MorningGuardUITests
         PRODUCT_NAME: "$(TARGET_NAME)"
@@ -314,8 +380,7 @@ targets:
         SWIFT_APPROACHABLE_CONCURRENCY: YES
         SWIFT_EMIT_LOC_STRINGS: NO
         SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY: YES
-        TARGETED_DEVICE_FAMILY: "1,2"
+        TARGETED_DEVICE_FAMILY: "1"
         TEST_TARGET_NAME: MorningGuard
-        XROS_DEPLOYMENT_TARGET: "26.2"
     dependencies:
       - target: MorningGuard

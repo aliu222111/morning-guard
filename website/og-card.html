@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="fonts.css" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 1200px; height: 630px; }
+    body {
+      background: linear-gradient(135deg, #FFFBF5 0%, #FFF3E8 100%);
+      font-family: 'Raleway', sans-serif;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .left { padding: 0 0 0 80px; width: 720px; }
+    .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 40px; }
+    .brand svg { width: 44px; height: 44px; }
+    .brand span { font-size: 30px; font-weight: 700; color: #1C1917; letter-spacing: -0.5px; }
+    h1 {
+      font-size: 82px; font-weight: 700; line-height: 1.02;
+      letter-spacing: -3px; color: #1C1917; margin-bottom: 28px;
+    }
+    h1 em { font-style: normal; color: #F97316; }
+    p {
+      font-family: 'Lora', Georgia, serif; font-size: 27px; line-height: 1.5;
+      color: #6B6560; max-width: 560px; margin-bottom: 40px;
+    }
+    .badge {
+      display: inline-flex; align-items: center; gap: 14px;
+      background: #000; color: #fff; padding: 15px 30px; border-radius: 15px;
+    }
+    .badge .sub { font-size: 13px; opacity: .85; display: block; margin-bottom: 2px; }
+    .badge .main { font-size: 26px; font-weight: 700; letter-spacing: -0.4px; }
+    .phone {
+      position: absolute; right: 70px; top: 50%; transform: translateY(-50%) rotate(4deg);
+      width: 300px; background: #1C1917; border-radius: 42px; padding: 12px;
+      box-shadow: 0 30px 70px rgba(0,0,0,.28);
+    }
+    .phone img { display: block; width: 100%; border-radius: 32px; }
+  </style>
+</head>
+<body>
+  <div class="left">
+    <div class="brand">
+      <svg viewBox="0 0 28 28" fill="none">
+        <circle cx="14" cy="14" r="13" fill="#FFF3E8" stroke="#F97316" stroke-width="1.5"/>
+        <path d="M14 7 L14 14 L19 14" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M8 19 Q11 16 14 19 Q17 22 20 19" stroke="#F97316" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span>MorningGuard</span>
+    </div>
+    <h1>Own your<br /><em>first hour.</em></h1>
+    <p>Your distracting apps block themselves every morning, so you start the day on your own terms.</p>
+    <div class="badge">
+      <svg width="26" height="31" viewBox="0 0 24 29" fill="white"><path d="M19.707 15.267c-.031-3.177 2.594-4.716 2.716-4.793-1.484-2.167-3.786-2.463-4.597-2.492-1.958-.198-3.823 1.15-4.815 1.15-.992 0-2.52-1.12-4.14-1.093-2.127.033-4.09 1.234-5.185 3.126-2.22 3.845-.568 9.534 1.59 12.657 1.059 1.53 2.32 3.246 3.977 3.183 1.593-.063 2.197-1.03 4.124-1.03 1.927 0 2.465 1.03 4.15.998 1.716-.028 2.807-1.557 3.858-3.093 1.22-1.775 1.72-3.494 1.748-3.582-.038-.017-3.344-1.283-3.376-5.05l-.05.02zM16.573 5.717c.879-1.063 1.472-2.54 1.31-4.017-1.266.054-2.8.844-3.709 1.906-.812.938-1.527 2.438-1.336 3.878 1.413.109 2.857-.717 3.735-1.767z"/></svg>
+      <div><span class="sub">Download on the</span><span class="main">App Store</span></div>
+    </div>
+  </div>
+  <div class="phone"><img src="screenshots/home.png" alt="" /></div>
+</body>
+</html>

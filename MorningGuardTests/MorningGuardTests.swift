@@ -2,7 +2,7 @@
 //  MorningGuardTests.swift
 //  MorningGuardTests
 //
-//  Created by Alex Liu on 2026-03-30.
+//  Created on 2026-03-30.
 //
 
 import Testing

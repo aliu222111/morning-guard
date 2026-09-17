@@ -1,9 +1,14 @@
 import SwiftUI
+import UIKit
 
 struct OnboardingView: View {
     @EnvironmentObject var appState: AppState
     @EnvironmentObject var guardVM: GuardViewModel
     @State private var page = 0
+    @State private var isAuthorizing = false
+    @State private var showDeniedAlert = false
+
+    private let totalPages = 4
 
     var body: some View {
         ZStack {
@@ -18,28 +23,38 @@ struct OnboardingView: View {
                 TabView(selection: $page) {
                     OnboardPage(
                         emoji: "🌅",
+                        doodle: "doodle-onboard-1",
                         title: "Start your morning\nwithout the scroll.",
-                        bodyText: "Morning Guard quietly protects the first hour of your day — no willpower required.",
+                        bodyText: "Morning Guard blocks the apps that steal your attention for a window after you wake. No willpower required.",
                         tag: 0
                     )
                     OnboardPage(
-                        emoji: "🔒",
-                        title: "Your rules,\nyour apps.",
-                        bodyText: "Choose exactly which social apps to block. Instagram, TikTok, X — your call.",
+                        emoji: "☀️",
+                        doodle: "doodle-onboard-2",
+                        title: "A guided routine,\none step at a time.",
+                        bodyText: "Walk through water, movement, morning light, breathing, and journaling in the order you choose.",
                         tag: 1
                     )
                     OnboardPage(
-                        emoji: "☀️",
-                        title: "It lifts\nautomatically.",
-                        bodyText: "When your morning window ends, guard lifts on its own. No friction, no guilt.",
+                        emoji: "✨",
+                        doodle: "doodle-onboard-3",
+                        title: "Affirmations and\ndaily reflection.",
+                        bodyText: "Get a fresh journal prompt every morning and a positive affirmation sent whenever you need it.",
                         tag: 2
+                    )
+                    OnboardPage(
+                        emoji: "🔒",
+                        doodle: "doodle-onboard-4",
+                        title: "It lifts\nautomatically.",
+                        bodyText: "When your morning window ends, the guard lifts on its own. We'll notify you halfway through and when it's done.",
+                        tag: 3
                     )
                 }
                 .tabViewStyle(.page(indexDisplayMode: .always))
                 .frame(maxHeight: .infinity)
 
                 VStack(spacing: 14) {
-                    if page < 2 {
+                    if page < totalPages - 1 {
                         Button {
                             withAnimation { page += 1 }
                         } label: {
@@ -53,28 +68,58 @@ struct OnboardingView: View {
                         }
                     } else {
                         Button {
+                            guard !isAuthorizing else { return }
+                            isAuthorizing = true
                             Task {
                                 await guardVM.requestAuthorization()
-                                NotificationService.shared.requestPermission()
-                                appState.hasCompletedOnboarding = true
+                                isAuthorizing = false
+                                if guardVM.authorizationStatus == .authorized {
+                                    NotificationService.shared.requestPermission()
+                                    appState.hasCompletedOnboarding = true
+                                } else {
+                                    showDeniedAlert = true
+                                }
                             }
                         } label: {
-                            Label("Enable Morning Guard", systemImage: "sun.horizon.fill")
-                                .font(.body.weight(.medium))
-                                .frame(maxWidth: .infinity)
-                                .padding(.vertical, 16)
-                                .background(Color("Sunrise"))
-                                .foregroundStyle(.white)
-                                .clipShape(RoundedRectangle(cornerRadius: 18))
+                            Group {
+                                if isAuthorizing {
+                                    ProgressView()
+                                        .progressViewStyle(.circular)
+                                        .tint(.white)
+                                } else {
+                                    Label("Enable Morning Guard", systemImage: "sun.horizon.fill")
+                                        .font(.body.weight(.medium))
+                                }
+                            }
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 16)
+                            .background(Color("Sunrise").opacity(isAuthorizing ? 0.7 : 1.0))
+                            .foregroundStyle(.white)
+                            .clipShape(RoundedRectangle(cornerRadius: 18))
                         }
-                    }
+                        .disabled(isAuthorizing)
+                        .alert("Screen Time Access Required", isPresented: $showDeniedAlert) {
+                            Button("Open Settings") {
+                                if let url = URL(string: UIApplication.openSettingsURLString) {
+                                    UIApplication.shared.open(url)
+                                }
+                            }
+                            Button("Cancel", role: .cancel) {}
+                        } message: {
+                            Text("Morning Guard needs Screen Time access to block apps. Enable it in Settings and Screen Time.")
+                        }
 
-                    if page < 2 {
-                        Button("Skip") {
+                        // App-blocking is only one part of the app — the routine,
+                        // journal, and breathing work without Screen Time access.
+                        Button {
+                            NotificationService.shared.requestPermission()
                             appState.hasCompletedOnboarding = true
+                        } label: {
+                            Text("Not now — explore first")
+                                .font(.subheadline)
+                                .foregroundStyle(Color.secondaryText)
                         }
-                        .font(.subheadline)
-                        .foregroundStyle(Color("WarmTan"))
+                        .disabled(isAuthorizing)
                     }
                 }
                 .padding(.horizontal, 24)
@@ -86,26 +131,29 @@ struct OnboardingView: View {
 
 struct OnboardPage: View {
     let emoji: String
+    var doodle: String? = nil
     let title: String
     let bodyText: String
     let tag: Int
 
     var body: some View {
         VStack(spacing: 24) {
-            Text(emoji)
-                .font(.system(size: 72))
-                .shadow(color: .orange.opacity(0.3), radius: 20)
+            // Your hand-drawn art if present, otherwise the emoji.
+            Doodle(name: doodle ?? "", maxHeight: 160) {
+                Text(emoji)
+                    .font(.system(size: 72))
+                    .shadow(color: .orange.opacity(0.3), radius: 20)
+            }
 
             Text(title)
-                .font(.custom("Georgia", size: 30))
-                .italic()
+                .font(.mg("Raleway-SemiBold", 30))
                 .foregroundStyle(Color("WarmBrown"))
                 .multilineTextAlignment(.center)
                 .lineSpacing(4)
 
             Text(bodyText)
                 .font(.body)
-                .foregroundStyle(Color("WarmTan"))
+                .foregroundStyle(Color.secondaryText)
                 .multilineTextAlignment(.center)
                 .lineSpacing(4)
                 .frame(maxWidth: 280)

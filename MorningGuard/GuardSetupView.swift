@@ -13,7 +13,7 @@ struct GuardSetupView: View {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 20) {
 
-                        // Duration picker
+                        // Duration + weekends
                         VStack(alignment: .leading, spacing: 8) {
                             SectionLabel(text: "Block duration")
                             DurationCard()
@@ -25,10 +25,16 @@ struct GuardSetupView: View {
                             AppPickerCard(showPicker: $showPicker)
                         }
 
-                        // Schedule options
+                        // Auto-activate
                         VStack(alignment: .leading, spacing: 8) {
-                            SectionLabel(text: "Schedule")
-                            ScheduleCard()
+                            SectionLabel(text: "Auto-activate")
+                            MorningAutoBlockCard()
+                        }
+
+                        // Bedtime guard
+                        VStack(alignment: .leading, spacing: 8) {
+                            SectionLabel(text: "Bedtime Guard")
+                            ScheduledGuardCard()
                         }
 
                         Spacer(minLength: 80)
@@ -48,17 +54,17 @@ struct GuardSetupView: View {
 struct DurationCard: View {
     @EnvironmentObject var guardVM: GuardViewModel
 
-    let steps = [15, 30, 45, 60, 90, 120]
-
     var body: some View {
         VStack(spacing: 14) {
             Text("\(guardVM.windowDurationMinutes) min")
-                .font(.custom("Georgia", size: 40))
-                .foregroundStyle(Color("Sunrise"))
+                .font(.mg("Raleway-SemiBold", 40))
+                .foregroundStyle(guardVM.isGuardActive ? Color.secondary : Color("Sunrise"))
 
-            Text("after first phone unlock")
+            // While a guard is running the window is fixed; changing it here would
+            // desync the countdown, the completion notification, and the shield lift.
+            Text(guardVM.isGuardActive ? "locked while guard is active" : "block window length")
                 .font(.caption)
-                .foregroundStyle(Color("WarmTan"))
+                .foregroundStyle(Color.secondaryText)
 
             Slider(
                 value: Binding(
@@ -69,6 +75,7 @@ struct DurationCard: View {
                 step: 15
             )
             .tint(Color("Sunrise"))
+            .disabled(guardVM.isGuardActive)
 
             HStack {
                 Text("15m")
@@ -76,7 +83,19 @@ struct DurationCard: View {
                 Text("2h")
             }
             .font(.caption2)
-            .foregroundStyle(Color("WarmTan"))
+            .foregroundStyle(Color.secondaryText)
+
+            Divider().opacity(0.35)
+
+            HStack {
+                Text("Include weekends")
+                    .font(.subheadline.weight(.medium))
+                    .foregroundStyle(Color.appPrimaryText)
+                Spacer()
+                Toggle("", isOn: $guardVM.weekendsEnabled)
+                    .tint(Color("Sunrise"))
+                    .labelsHidden()
+            }
         }
         .padding(20)
         .background(morningCard)
@@ -96,19 +115,20 @@ struct AppPickerCard: View {
     var body: some View {
         VStack(spacing: 0) {
             Button {
+                guard !guardVM.isGuardActive else { return }
                 showPicker = true
             } label: {
                 HStack {
                     Image(systemName: "apps.iphone")
-                        .foregroundStyle(Color("Sunrise"))
+                        .foregroundStyle(guardVM.isGuardActive ? Color.secondary : Color("Sunrise"))
                         .frame(width: 28)
                     Text("Choose apps")
-                        .foregroundStyle(Color("WarmBrown"))
+                        .foregroundStyle(guardVM.isGuardActive ? Color.secondary : Color.appPrimaryText)
                     Spacer()
                     if selectedCount > 0 {
                         Text("\(selectedCount) selected")
                             .font(.caption.weight(.medium))
-                            .foregroundStyle(Color("Sunrise"))
+                            .foregroundStyle(guardVM.isGuardActive ? Color.secondary : Color("Sunrise"))
                     }
                     Image(systemName: "chevron.right")
                         .foregroundStyle(Color("WarmTan").opacity(0.6))
@@ -116,31 +136,140 @@ struct AppPickerCard: View {
                 }
                 .padding(16)
             }
+            .disabled(guardVM.isGuardActive)
+
+            if guardVM.isGuardActive {
+                Divider().opacity(0.35).padding(.horizontal, 14)
+                HStack(spacing: 8) {
+                    Image(systemName: "lock.fill")
+                        .font(.caption)
+                        .foregroundStyle(Color.secondaryText)
+                    Text("App selection is locked while guard is running.")
+                        .font(.caption)
+                        .foregroundStyle(Color.secondaryText)
+                }
+                .padding(.horizontal, 14)
+                .padding(.vertical, 10)
+            }
         }
         .background(morningCard)
         .padding(.horizontal)
     }
 }
 
-// MARK: - Schedule Card
-struct ScheduleCard: View {
+// MARK: - Scheduled Guard Card
+struct ScheduledGuardCard: View {
+    @EnvironmentObject var guardVM: GuardViewModel
+
+    var body: some View {
+        // Once a bedtime block is running, it's committed — no escape-hatch toggle
+        // and no editing its window until it ends on its own.
+        let locked = guardVM.isBedtimeBlockActive
+
+        return VStack(spacing: 0) {
+            ToggleRow(
+                icon: "moon.fill",
+                title: "Scheduled Guard",
+                subtitle: "Automatically activate guard at a set time each day",
+                isOn: $guardVM.scheduledGuardEnabled,
+                locked: locked
+            )
+
+            if locked {
+                Divider().opacity(0.35).padding(.horizontal, 14)
+                HStack(spacing: 8) {
+                    Image(systemName: "lock.fill")
+                        .font(.caption)
+                        .foregroundStyle(Color.secondaryText)
+                    Text("The block is running now — it lifts on its own when the window ends.")
+                        .font(.caption)
+                        .foregroundStyle(Color.secondaryText)
+                }
+                .padding(.horizontal, 14)
+                .padding(.vertical, 10)
+            }
+
+            if guardVM.scheduledGuardEnabled && !locked {
+                Divider().opacity(0.35).padding(.horizontal, 14)
+
+                HStack {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Start time")
+                            .font(.subheadline.weight(.medium))
+                            .foregroundStyle(Color.appPrimaryText)
+                        Text("Guard activates at this time daily")
+                            .font(.caption)
+                            .foregroundStyle(Color.secondaryText)
+                    }
+                    Spacer()
+                    DatePicker(
+                        "",
+                        selection: $guardVM.scheduledGuardStartTime,
+                        displayedComponents: .hourAndMinute
+                    )
+                    .labelsHidden()
+                    .onChange(of: guardVM.scheduledGuardStartTime) { _, _ in
+                        guardVM.updateScheduledGuard()
+                    }
+                }
+                .padding(14)
+
+                Divider().opacity(0.35).padding(.horizontal, 14)
+
+                HStack {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Duration")
+                            .font(.subheadline.weight(.medium))
+                            .foregroundStyle(Color.appPrimaryText)
+                        Text("\(guardVM.scheduledGuardDurationHours) hr block")
+                            .font(.caption)
+                            .foregroundStyle(Color.secondaryText)
+                    }
+                    Spacer()
+                    Stepper("", value: $guardVM.scheduledGuardDurationHours, in: 1...12)
+                        .labelsHidden()
+                        .onChange(of: guardVM.scheduledGuardDurationHours) { _, _ in
+                            guardVM.updateScheduledGuard()
+                        }
+                }
+                .padding(14)
+            }
+        }
+        .background(morningCard)
+        .padding(.horizontal)
+    }
+}
+
+// MARK: - Morning Auto-Block Card
+
+struct MorningAutoBlockCard: View {
     @EnvironmentObject var guardVM: GuardViewModel
 
     var body: some View {
         VStack(spacing: 0) {
             ToggleRow(
-                icon: "moon.fill",
-                title: "Night reset",
-                subtitle: "Re-arm guard automatically after midnight",
-                isOn: .constant(true)
+                icon: "sun.horizon.fill",
+                title: "Schedule wake time",
+                subtitle: "Blocks activate automatically, no app launch needed",
+                isOn: $guardVM.morningAutoBlockEnabled
             )
-            Divider().padding(.leading, 56)
-            ToggleRow(
-                icon: "calendar.badge.clock",
-                title: "Weekends",
-                subtitle: "Keep guard active on Saturdays and Sundays",
-                isOn: $guardVM.weekendsEnabled
-            )
+
+            if guardVM.morningAutoBlockEnabled {
+                Divider().opacity(0.35).padding(.horizontal, 14)
+
+                HStack {
+                    Text("Wake time")
+                        .font(.subheadline.weight(.medium))
+                        .foregroundStyle(Color.appPrimaryText)
+                    Spacer()
+                    DatePicker("", selection: $guardVM.morningAutoBlockTime, displayedComponents: .hourAndMinute)
+                        .labelsHidden()
+                        .onChange(of: guardVM.morningAutoBlockTime) { _, _ in
+                            guardVM.updateMorningAutoBlock()
+                        }
+                }
+                .padding(14)
+            }
         }
         .background(morningCard)
         .padding(.horizontal)
@@ -153,6 +282,7 @@ struct ToggleRow: View {
     let title: String
     let subtitle: String
     @Binding var isOn: Bool
+    var locked: Bool = false
 
     var body: some View {
         HStack(spacing: 12) {
@@ -167,15 +297,21 @@ struct ToggleRow: View {
             VStack(alignment: .leading, spacing: 2) {
                 Text(title)
                     .font(.subheadline.weight(.medium))
-                    .foregroundStyle(Color("WarmBrown"))
+                    .foregroundStyle(Color.appPrimaryText)
                 Text(subtitle)
                     .font(.caption)
-                    .foregroundStyle(Color("WarmTan"))
+                    .foregroundStyle(Color.secondaryText)
             }
             Spacer()
+            if locked {
+                Image(systemName: "lock.fill")
+                    .font(.caption)
+                    .foregroundStyle(Color.secondaryText)
+            }
             Toggle("", isOn: $isOn)
                 .tint(Color("Sunrise"))
                 .labelsHidden()
+                .disabled(locked)
         }
         .padding(14)
     }
@@ -184,9 +320,7 @@ struct ToggleRow: View {
 // MARK: - Shared card background
 var morningCard: some View {
     RoundedRectangle(cornerRadius: 18)
-        .fill(.white.opacity(0.7))
-        .overlay(
-            RoundedRectangle(cornerRadius: 18)
-                .strokeBorder(Color("WarmTan").opacity(0.25), lineWidth: 0.5)
-        )
+        .fill(Color.appCardFill)
+        .shadow(color: .black.opacity(0.06), radius: 8, x: 0, y: 2)
+        .compositingGroup()
 }

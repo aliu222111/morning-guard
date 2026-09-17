@@ -1,0 +1,24 @@
+# macOS
+.DS_Store
+
+# Xcode user-specific state (embeds local username + absolute paths)
+xcuserdata/
+*.xcuserstate
+*.xcuserdatad/
+
+# Build output
+DerivedData/
+build/
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager
+.swiftpm/
+.build/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output

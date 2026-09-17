@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support | MorningGuard</title>
+  <meta name="description" content="MorningGuard support. Get answers to common questions or contact us directly." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="fonts.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .faq-list { margin-top: 0; }
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      margin-bottom: 12px;
+      overflow: hidden;
+      background: var(--card);
+    }
+    .faq-q {
+      width: 100%;
+      text-align: left;
+      padding: 20px 24px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--text);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      transition: background .15s;
+    }
+    .faq-q:hover { background: var(--sunrise-lt); }
+    .faq-chevron {
+      flex-shrink: 0;
+      transition: transform .2s;
+      color: var(--sunrise);
+    }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+    .faq-a {
+      display: none;
+      padding: 0 24px 20px;
+      font-family: 'Lora', Georgia, serif;
+      font-size: 15px;
+      color: var(--text-sec);
+      line-height: 1.8;
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+    }
+    .faq-item.open .faq-a { display: block; }
+    .contact-box {
+      background: var(--sunrise-lt);
+      border: 1px solid var(--sunrise-md);
+      border-radius: var(--radius);
+      padding: 40px 36px;
+      text-align: center;
+      margin-top: 60px;
+    }
+    .contact-box h2 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 12px;
+      letter-spacing: -0.3px;
+    }
+    .contact-box p {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 16px;
+      color: var(--text-sec);
+      margin-bottom: 24px;
+      line-height: 1.7;
+    }
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--sunrise);
+      color: #fff;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 13px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: opacity .15s, transform .15s;
+    }
+    .contact-btn:hover { opacity: .9; transform: translateY(-1px); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-logo" href="/">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true" focusable="false">
+          <circle cx="14" cy="14" r="13" fill="#FFF3E8" stroke="#F97316" stroke-width="1.5"/>
+          <path d="M14 7 L14 14 L19 14" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8 19 Q11 16 14 19 Q17 22 20 19" stroke="#F97316" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+        </svg>
+        MorningGuard
+      </a>
+      <a class="nav-cta" href="https://apps.apple.com/app/id6793297906" target="_blank" rel="noopener">Download Free</a>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <h1>Support</h1>
+    <p class="updated">We're a small team. We read every message.</p>
+  </div>
+
+  <hr class="page-divider" />
+
+  <div class="page-content">
+
+    <h2>Frequently asked questions</h2>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Why won't the app block my apps?
+          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+            <path d="M6 9 L12 15 L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="faq-a">
+          MorningGuard needs Screen Time permission to block apps. Open the app, tap the Guard tab,
+          and tap "Enable Screen Time access." You'll be prompted to allow it. If you've already done
+          this and blocking still isn't working, go to Settings &rsaquo; Screen Time and make sure
+          Screen Time is turned on for your own device.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          The blocked apps aren't unlocking after my window ends.
+          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+            <path d="M6 9 L12 15 L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="faq-a">
+          Open MorningGuard. The app checks whether your guard window has ended and clears restrictions
+          when you return to it. If apps are still blocked after opening the app, force-quit and reopen it.
+          This can happen when the device reboots mid-session, and we're working on a fix.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Dictation isn't working / the microphone button doesn't respond.
+          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+            <path d="M6 9 L12 15 L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="faq-a">
+          Go to Settings &rsaquo; Privacy &amp; Security &rsaquo; Microphone and make sure MorningGuard
+          is enabled. Also check Settings &rsaquo; Privacy &amp; Security &rsaquo; Speech Recognition.
+          Both need to be allowed for voice dictation to work. If you've granted both and it still
+          fails, try force-quitting the app and trying again.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          The Morning Light feature shows "0 lux" or doesn't measure anything.
+          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+            <path d="M6 9 L12 15 L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="faq-a">
+          The light meter uses your front or rear camera. Make sure Camera access is enabled in
+          Settings &rsaquo; Privacy &amp; Security &rsaquo; Camera &rsaquo; MorningGuard.
+          Also make sure you're holding the phone so the camera faces the sky or a bright window.
+          It won't measure well if the camera is facing a wall or your hand.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          My affirmation notifications aren't arriving.
+          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+            <path d="M6 9 L12 15 L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="faq-a">
+          First, make sure notifications are enabled: Settings &rsaquo; Notifications &rsaquo;
+          MorningGuard. Then open MorningGuard, go to Settings &rsaquo; Affirmations, and toggle
+          "Daily affirmation" off and back on to reschedule them. Notifications are scheduled
+          14 days in advance, so toggling regenerates the upcoming batch.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Is MorningGuard available on iPad or Android?
+          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+            <path d="M6 9 L12 15 L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="faq-a">
+          MorningGuard is currently iPhone only. iPad support may come in a future update.
+          An Android version is not planned at this time, since the Screen Time API is only available
+          on Apple platforms.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          What iOS version does MorningGuard require?
+          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+            <path d="M6 9 L12 15 L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="faq-a">
+          MorningGuard requires iOS 17.6 or later. The Screen Time API features we use were
+          introduced in iOS 16, but we require 17.6 for stability and to take advantage of
+          the latest platform improvements.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Does MorningGuard work with Family Sharing or parental controls?
+          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+            <path d="M6 9 L12 15 L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="faq-a">
+          MorningGuard uses Screen Time in <strong>individual mode</strong>, meaning it only
+          manages your own device, and only with your explicit consent. It is not a parental
+          control tool. If your device is managed by a parent's Screen Time restrictions,
+          MorningGuard may not be able to request Screen Time access.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="contact-box">
+      <h2>Still stuck?</h2>
+      <p>
+        If your issue isn't covered here, send us an email. Include your iOS version and a
+        description of what happened, and we'll get back to you within 48 hours.
+      </p>
+      <a class="contact-btn" href="mailto:hello@morningguard.com">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+          <rect x="2" y="4" width="20" height="16" rx="3" stroke="white" stroke-width="2"/>
+          <path d="M2 8 L12 14 L22 8" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        Email support
+      </a>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <a class="nav-logo" href="/">
+        <svg width="22" height="22" viewBox="0 0 28 28" fill="none" aria-hidden="true" focusable="false">
+          <circle cx="14" cy="14" r="13" fill="#FFF3E8" stroke="#F97316" stroke-width="1.5"/>
+          <path d="M14 7 L14 14 L19 14" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8 19 Q11 16 14 19 Q17 22 20 19" stroke="#F97316" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+        </svg>
+        MorningGuard
+      </a>
+      <nav class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="support.html">Support</a>
+        <a href="mailto:hello@morningguard.com">Contact</a>
+      </nav>
+      <p class="footer-copy">© 2026 MorningGuard. Made with intention.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.faq-item').forEach((item, i) => {
+      const btn = item.querySelector('.faq-q');
+      const answer = item.querySelector('.faq-a');
+      // Wire up ARIA so screen readers know each item's state and its panel.
+      const answerId = 'faq-a-' + i;
+      answer.id = answerId;
+      answer.setAttribute('role', 'region');
+      btn.setAttribute('aria-controls', answerId);
+      btn.setAttribute('aria-expanded', 'false');
+
+      btn.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(other => {
+          other.classList.remove('open');
+          other.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
