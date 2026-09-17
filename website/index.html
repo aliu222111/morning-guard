@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MorningGuard: Own your first hour</title>
-  <meta name="description" content="MorningGuard blocks distracting apps during your morning routine so you can start every day with intention. Free on the App Store." />
-  <meta property="og:title" content="MorningGuard: Own your first hour" />
-  <meta property="og:description" content="Your distracting apps block themselves every morning, so you start the day on your own terms." />
+  <title>Morning Guard: your apps lock themselves every morning</title>
+  <meta name="description" content="Morning Guard uses Apple's Screen Time system to block your distracting apps for the first hour after you wake. It turns on by itself and lifts by itself." />
+  <meta property="og:title" content="Morning Guard: your apps lock themselves every morning" />
+  <meta property="og:description" content="The block runs on its own at wake time and lifts when your window ends. You never open the app." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://morningguard.com/" />
   <meta property="og:image" content="https://morningguard.com/og-image.png" />
@@ -33,159 +33,178 @@
         </svg>
         MorningGuard
       </a>
-      <a class="nav-cta" href="https://apps.apple.com/app/id6793297906" target="_blank" rel="noopener">Download Free</a>
+      <span class="nav-cta nav-cta--pending">Coming soon</span>
     </div>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-badge">Now on the App Store</div>
-    <h1>Own your<br /><em>first hour.</em></h1>
+    <div class="hero-badge">Coming soon to iPhone</div>
+    <h1>Your apps lock<br /><em>themselves.</em></h1>
     <p class="hero-sub">
-      MorningGuard blocks your distracting apps by itself for the first hour after you wake up.
-      You never open it. That leaves you time to drink water, move, and plan your day before the
-      scrolling starts.
+      Morning Guard blocks the apps you pick for the first hour after you wake. It turns on
+      without you, and it lifts without you. There is no timer to dismiss and nothing to
+      remember, because you never open the app at all.
     </p>
-
-    <!-- APP STORE DOWNLOAD -->
-    <!-- TODO: Replace 6793297906 with your numeric App Store app ID -->
-    <div class="download-group" id="download">
-      <a class="appstore-btn" href="https://apps.apple.com/app/id6793297906" target="_blank" rel="noopener">
-        <svg width="24" height="29" viewBox="0 0 24 29" fill="white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M19.707 15.267c-.031-3.177 2.594-4.716 2.716-4.793-1.484-2.167-3.786-2.463-4.597-2.492-1.958-.198-3.823 1.15-4.815 1.15-.992 0-2.52-1.12-4.14-1.093-2.127.033-4.09 1.234-5.185 3.126-2.22 3.845-.568 9.534 1.59 12.657 1.059 1.53 2.32 3.246 3.977 3.183 1.593-.063 2.197-1.03 4.124-1.03 1.927 0 2.465 1.03 4.15.998 1.716-.028 2.807-1.557 3.858-3.093 1.22-1.775 1.72-3.494 1.748-3.582-.038-.017-3.344-1.283-3.376-5.05l-.05.02zM16.573 5.717c.879-1.063 1.472-2.54 1.31-4.017-1.266.054-2.8.844-3.709 1.906-.812.938-1.527 2.438-1.336 3.878 1.413.109 2.857-.717 3.735-1.767z"/>
-        </svg>
-        <div class="appstore-text">
-          <span class="appstore-sub">Download on the</span>
-          <span class="appstore-main">App Store</span>
-        </div>
-      </a>
-      <p class="download-meta">Free · iPhone only · Requires iOS 17.6+</p>
-    </div>
-
-    <div class="hero-phones">
-      <div class="phone-mockup phone-back">
-        <img class="phone-shot" src="screenshots/guard.png" alt="MorningGuard app screen showing the block window length, weekend toggle, and a button to choose which apps to block" width="294" height="640" loading="lazy" />
-      </div>
-      <div class="phone-mockup phone-front">
-        <img class="phone-shot" src="screenshots/home.png" alt="MorningGuard home screen showing the morning greeting, weather, morning routine progress, and the Morning Guard status card" width="294" height="640" />
-      </div>
-    </div>
   </section>
 
-  <!-- SOCIAL PROOF -->
-  <section class="proof">
-    <p>Built for people who want their mornings back</p>
-    <div class="proof-stats">
-      <div class="stat"><span class="stat-num">0</span><span class="stat-label">Scroll sessions before 9am</span></div>
-      <div class="stat-divider"></div>
-      <div class="stat"><span class="stat-num">6</span><span class="stat-label">Guided morning steps</span></div>
-      <div class="stat-divider"></div>
-      <div class="stat"><span class="stat-num">1</span><span class="stat-label">Minute is all it takes to begin</span></div>
-    </div>
+  <!-- THE DEMO -->
+  <section class="demo">
+      <svg class="demo-frame" viewBox="0 0 300 600" role="img"
+           aria-label="Animation of a phone: tapping a social app, which is covered by Morning Guard's block screen showing time remaining.">
+        <defs>
+          <clipPath id="mg-screen"><rect x="12" y="12" width="276" height="576" rx="34"/></clipPath>
+          <linearGradient id="mg-ig" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#F9CE34"/><stop offset="50%" stop-color="#EE2A7B"/><stop offset="100%" stop-color="#6228D7"/>
+          </linearGradient>
+          <linearGradient id="mg-sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#FFF3E8"/><stop offset="100%" stop-color="#FFE3CC"/>
+          </linearGradient>
+          <linearGradient id="mg-shieldbg" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#FFFBF5"/><stop offset="100%" stop-color="#FFF3E8"/>
+          </linearGradient>
+        </defs>
+
+        <!-- phone body -->
+        <rect x="4" y="4" width="292" height="592" rx="42" fill="#1C1917"/>
+        <rect x="12" y="12" width="276" height="576" rx="34" fill="url(#mg-sky)"/>
+
+        <g clip-path="url(#mg-screen)">
+          <g class="mg-home">
+            <text x="150" y="62" text-anchor="middle" font-family="Raleway, sans-serif" font-size="13" fill="#6B6560">Tuesday, 7:13 AM</text>
+            <!-- app grid -->
+            <g>
+              <rect x="38" y="96" width="52" height="52" rx="14" fill="#34D399"/>
+              <rect x="124" y="96" width="52" height="52" rx="14" fill="#60A5FA"/>
+              <rect x="210" y="96" width="52" height="52" rx="14" fill="#FBBF24"/>
+              <rect x="38" y="172" width="52" height="52" rx="14" fill="#A78BFA"/>
+              <rect x="124" y="172" width="52" height="52" rx="14" fill="#F87171"/>
+              <rect x="210" y="172" width="52" height="52" rx="14" fill="#38BDF8"/>
+              <rect x="124" y="248" width="52" height="52" rx="14" fill="#94A3B8"/>
+              <rect x="210" y="248" width="52" height="52" rx="14" fill="#FB923C"/>
+            </g>
+            <!-- the one that gets tapped -->
+            <g class="mg-launch">
+              <rect x="38" y="248" width="52" height="52" rx="14" fill="url(#mg-ig)"/>
+              <rect x="50" y="260" width="28" height="28" rx="9" fill="none" stroke="#fff" stroke-width="2.4"/>
+              <circle cx="64" cy="274" r="6" fill="none" stroke="#fff" stroke-width="2.4"/>
+            </g>
+          </g>
+
+          <!-- the finger -->
+          <g class="mg-finger">
+            <circle cx="64" cy="274" r="19" fill="#1C1917" opacity="0.16"/>
+            <circle cx="64" cy="274" r="12" fill="#1C1917" opacity="0.28"/>
+          </g>
+
+          <!-- the shield -->
+          <g class="mg-shield">
+            <rect x="12" y="12" width="276" height="576" rx="34" fill="url(#mg-shieldbg)"/>
+            <circle cx="150" cy="196" r="44" fill="#FFF3E8" stroke="#F97316" stroke-width="2"/>
+            <path d="M150 172 v22 M150 172 a14 14 0 0 1 14 14 v8" fill="none" stroke="#F97316" stroke-width="0"/>
+            <rect x="134" y="192" width="32" height="26" rx="6" fill="#F97316"/>
+            <path d="M139 192 v-8 a11 11 0 0 1 22 0 v8" fill="none" stroke="#F97316" stroke-width="4" stroke-linecap="round"/>
+            <text x="150" y="286" text-anchor="middle" font-family="Lora, serif" font-size="23" fill="#1C1917">Not yet.</text>
+            <text x="150" y="316" text-anchor="middle" font-family="Raleway, sans-serif" font-size="14" fill="#6B6560">Morning Guard is on until 8:00 AM</text>
+
+            <text class="mg-tick mg-tick-1" x="150" y="386" text-anchor="middle" font-family="Raleway, sans-serif" font-weight="600" font-size="40" fill="#F97316">46:59</text>
+            <text class="mg-tick mg-tick-2" x="150" y="386" text-anchor="middle" font-family="Raleway, sans-serif" font-weight="600" font-size="40" fill="#F97316">46:58</text>
+            <text class="mg-tick mg-tick-3" x="150" y="386" text-anchor="middle" font-family="Raleway, sans-serif" font-weight="600" font-size="40" fill="#F97316">46:57</text>
+            <text class="mg-tick mg-tick-4" x="150" y="386" text-anchor="middle" font-family="Raleway, sans-serif" font-weight="600" font-size="40" fill="#F97316">46:56</text>
+            <text x="150" y="410" text-anchor="middle" font-family="Raleway, sans-serif" font-size="12" fill="#6B6560">remaining</text>
+
+            <rect x="60" y="446" width="180" height="42" rx="21" fill="#FFF" stroke="#E7E5E4"/>
+            <text x="150" y="472" text-anchor="middle" font-family="Raleway, sans-serif" font-size="14" fill="#6B6560">Drink water, get outside</text>
+          </g>
+        </g>
+
+        <!-- notch + home bar -->
+        <rect x="112" y="16" width="76" height="20" rx="10" fill="#1C1917"/>
+        <rect x="112" y="572" width="76" height="4" rx="2" fill="#1C1917" opacity="0.35"/>
+      </svg>
+    <p class="demo-caption">
+      What it looks like when you reach for the app out of habit. The block is applied by iOS,
+      so the app does not open.
+    </p>
   </section>
 
-  <!-- HOW IT WORKS -->
+  <!-- HOW -->
   <section class="how">
     <div class="section-label">How it works</div>
-    <h2>A better morning in three steps</h2>
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">01</div>
-        <div class="step-icon">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3 L20 6 V11 C20 16 16.5 19.5 12 21 C7.5 19.5 4 16 4 11 V6 Z"/></svg>
-        </div>
-        <h3>It blocks itself at wake time</h3>
-        <p>Pick the apps you want out of your morning and set your wake time once. Every morning the block turns on automatically, before you touch your phone. You don't open the app or tap a thing.</p>
+    <h2>Set it once. Then forget it.</h2>
+
+    <div class="step">
+      <span class="step-num">01</span>
+      <div>
+        <h3>Pick your apps and your wake time</h3>
+        <p>
+          Choose which apps should be out of reach and when your morning starts. This is the only
+          part that needs you, and it takes about a minute.
+        </p>
       </div>
-      <div class="step">
-        <div class="step-num">02</div>
-        <div class="step-icon">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
-        </div>
-        <h3>Follow the routine</h3>
-        <p>A guided flow takes you through one step at a time: water, movement, morning light, a few breaths, a journal entry, and the one thing you want to get done today.</p>
+    </div>
+
+    <div class="step">
+      <span class="step-num">02</span>
+      <div>
+        <h3>The block turns on before you touch the phone</h3>
+        <p>
+          Morning Guard registers your window with iOS ahead of time, so the block is already in
+          place at wake time. The app does not need to be running, or even to have been opened.
+        </p>
       </div>
-      <div class="step">
-        <div class="step-num">03</div>
-        <div class="step-icon">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-1.9"/></svg>
-        </div>
-        <h3>It lifts automatically</h3>
-        <p>When your window ends, the apps unlock on their own. You don't have to remember to turn anything back on.</p>
+    </div>
+
+    <div class="step">
+      <span class="step-num">03</span>
+      <div>
+        <h3>It lifts on its own</h3>
+        <p>
+          When your window ends the apps come back by themselves. You do not have to remember to
+          switch anything off, and there is nothing to undo.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- SCREENSHOTS -->
-  <section class="gallery">
-    <div class="section-label">A look inside</div>
-    <h2>Your morning, one screen at a time</h2>
-    <div class="gallery-row">
-      <figure class="gallery-phone">
-        <img src="screenshots/routine.png" alt="The guided routine walking through the first step, drinking a glass of water" width="294" height="640" loading="lazy" />
-        <figcaption>Start with water</figcaption>
-      </figure>
-      <figure class="gallery-phone">
-        <img src="screenshots/move.png" alt="The movement step showing a short list of exercises like push-ups, squats, and a forward fold" width="294" height="640" loading="lazy" />
-        <figcaption>Move your body</figcaption>
-      </figure>
-      <figure class="gallery-phone">
-        <img src="screenshots/light.png" alt="The morning light step with a light meter that measures whether you are getting bright enough light to set your body clock" width="294" height="640" loading="lazy" />
-        <figcaption>Measure your light</figcaption>
-      </figure>
-      <figure class="gallery-phone">
-        <img src="screenshots/journal.png" alt="The journaling step with a daily prompt and a Dictate button for speaking your entry out loud" width="294" height="640" loading="lazy" />
-        <figcaption>Journal by voice</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- FEATURES -->
+  <!-- WHY IT HOLDS -->
   <section class="features">
-    <div class="section-label">Features</div>
-    <h2>Only what a<br />morning needs.</h2>
+    <div class="section-label">Why it holds</div>
+    <h2>Enforced by iOS,<br />not by willpower.</h2>
+
     <div class="feature-grid">
       <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/></svg>
-        </div>
-        <h4>Automatic blocking, hands-free</h4>
-        <p>Set your wake time once and the block runs on its own every morning, with no app to launch. This is the core of MorningGuard: your apps are already locked before you can reach for them.</p>
+        <div class="feature-icon">&#128274;</div>
+        <h3>It uses Apple's Screen Time system</h3>
+        <p>
+          The same mechanism parents use for their kids, pointed at your own morning instead. A
+          blocked app does not open. It is not a reminder or a nudge you can tap past.
+        </p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 3h11a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M8 8h7M8 12h7M8 16h4"/></svg>
-        </div>
-        <h4>Guided morning routine</h4>
-        <p>Move through water, sunlight, breathing, journaling, and your top task, one step at a time.</p>
+        <div class="feature-icon">&#9200;</div>
+        <h3>No app to launch</h3>
+        <p>
+          The schedule is handed to iOS in advance and a background extension applies the block
+          when the window starts. Morning Guard works whether or not you open it.
+        </p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4"/></svg>
-        </div>
-        <h4>Voice journaling</h4>
-        <p>Dictate your journal entry or say your focus for the day out loud. MorningGuard writes it down as you talk.</p>
+        <div class="feature-icon">&#127774;</div>
+        <h3>Two things worth doing instead</h3>
+        <p>
+          While the block is up you get exactly two suggestions: drink a glass of water, and get
+          some real light on your face. The app measures the light with the camera so you know
+          when you have had enough.
+        </p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="3"/><path d="M8 2v1M8 13v1M2 8h1M13 8h1M4 4l.7.7M11.3 4l-.7.7"/><path d="M9 18a4 4 0 0 1 7.5 1.2A3 3 0 0 1 16 21H8a3.5 3.5 0 0 1 0-7c.4 0 .8.06 1.1.17"/></svg>
-        </div>
-        <h4>Weather at a glance</h4>
-        <p>See this morning's conditions the moment you open the app, before you'd normally check Instagram.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg>
-        </div>
-        <h4>Daily affirmations</h4>
-        <p>Get one of 50 built-in affirmations as a morning notification, or write your own.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
-        </div>
-        <h4>Your data stays on your phone</h4>
-        <p>No account, no cloud, no ads. Everything stays on your device, and Apple's own design keeps your blocked apps hidden even from us.</p>
+        <div class="feature-icon">&#128200;</div>
+        <h3>A streak, if you want one</h3>
+        <p>
+          Every morning the guard runs counts as a day. There is a home-screen widget if seeing
+          the number helps, and you can ignore it entirely if it does not.
+        </p>
       </div>
     </div>
   </section>
@@ -193,50 +212,34 @@
   <!-- PRIVACY -->
   <section class="privacy-section">
     <div class="privacy-inner">
-      <div class="privacy-icon">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3 L20 6 V11 C20 16 16.5 19.5 12 21 C7.5 19.5 4 16 4 11 V6 Z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg>
-      </div>
-      <h2>Built for privacy, by design</h2>
-      <p>MorningGuard uses Apple's Screen Time API, the same system parents use for their kids, applied here to your own focus. We can't see your blocked apps, your journal, or your location. All of it stays on your phone.</p>
-      <a href="privacy.html" class="privacy-link">Read the full privacy policy</a>
+      <div class="privacy-icon">&#128273;</div>
+      <h2>Nothing leaves your phone</h2>
+      <p>
+        There is no account, no server and no analytics, because there is nothing to send. Apple's
+        design means Morning Guard cannot even read which apps you picked: the selection is stored
+        as tokens only your device can interpret. The light readings are processed as you take
+        them and never saved.
+      </p>
+      <a class="privacy-link" href="privacy.html">Read the full privacy policy</a>
     </div>
   </section>
 
-  <!-- BOTTOM CTA -->
-  <section class="bottom-cta" id="download-bottom">
-    <h2>Ready to take your mornings back?</h2>
-    <p>Download MorningGuard free and own your first hour, starting tomorrow.</p>
-    <div style="display:flex;flex-direction:column;align-items:center;gap:14px;">
-      <a class="appstore-btn appstore-btn--light" href="https://apps.apple.com/app/id6793297906" target="_blank" rel="noopener">
-        <svg width="24" height="29" viewBox="0 0 24 29" fill="black" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M19.707 15.267c-.031-3.177 2.594-4.716 2.716-4.793-1.484-2.167-3.786-2.463-4.597-2.492-1.958-.198-3.823 1.15-4.815 1.15-.992 0-2.52-1.12-4.14-1.093-2.127.033-4.09 1.234-5.185 3.126-2.22 3.845-.568 9.534 1.59 12.657 1.059 1.53 2.32 3.246 3.977 3.183 1.593-.063 2.197-1.03 4.124-1.03 1.927 0 2.465 1.03 4.15.998 1.716-.028 2.807-1.557 3.858-3.093 1.22-1.775 1.72-3.494 1.748-3.582-.038-.017-3.344-1.283-3.376-5.05l-.05.02zM16.573 5.717c.879-1.063 1.472-2.54 1.31-4.017-1.266.054-2.8.844-3.709 1.906-.812.938-1.527 2.438-1.336 3.878 1.413.109 2.857-.717 3.735-1.767z"/>
-        </svg>
-        <div class="appstore-text" style="color:#000;">
-          <span class="appstore-sub">Download on the</span>
-          <span class="appstore-main">App Store</span>
-        </div>
-      </a>
-      <p style="font-size:13px;color:rgba(255,255,255,.55);">Free · iPhone only · iOS 17.6+</p>
-    </div>
+  <!-- BOTTOM -->
+  <section class="bottom-cta">
+    <h2>Take back the first hour.</h2>
+    <p class="download-meta">iPhone only &middot; Requires iOS 17.6+ &middot; Coming soon to the App Store</p>
   </section>
 
   <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
-      <a class="nav-logo" href="/">
-        <svg width="22" height="22" viewBox="0 0 28 28" fill="none" aria-hidden="true" focusable="false">
-          <circle cx="14" cy="14" r="13" fill="#FFF3E8" stroke="#F97316" stroke-width="1.5"/>
-          <path d="M14 7 L14 14 L19 14" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M8 19 Q11 16 14 19 Q17 22 20 19" stroke="#F97316" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-        </svg>
-        MorningGuard
-      </a>
-      <nav class="footer-links">
+      <a class="nav-logo" href="/">MorningGuard</a>
+      <div class="footer-links">
         <a href="privacy.html">Privacy Policy</a>
         <a href="support.html">Support</a>
         <a href="mailto:hello@morningguard.com">Contact</a>
-      </nav>
-      <p class="footer-copy">© 2026 MorningGuard. Made with intention.</p>
+      </div>
+      <p class="footer-copy">&copy; 2026 MorningGuard</p>
     </div>
   </footer>
 

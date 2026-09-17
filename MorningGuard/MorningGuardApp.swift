@@ -72,11 +72,10 @@ struct MorningGuardApp: App {
                 guardViewModel.refreshAuthorizationStatus()
                 guardViewModel.resumeTimerIfNeeded()
                 guardViewModel.autoStartIfFirstMorningUnlock()
-                // Roll the routine over here too: views that stayed mounted
+                // Roll the tasks over here too: views that stayed mounted
                 // overnight never re-fire onAppear, which left yesterday's
-                // progress on screen (and mirrored into the widgets) all morning.
-                RoutineStore.shared.resetIfNewDay()
-                refreshAffirmations()
+                // ticks on screen (and mirrored into the widgets) all morning.
+                MorningTasks.shared.resetIfNewDay()
             }
         }
     }
@@ -87,22 +86,6 @@ struct MorningGuardApp: App {
             guard let url = Bundle.main.url(forResource: name, withExtension: "ttf") else { continue }
             CTFontManagerRegisterFontsForURL(url as CFURL, .process, nil)
         }
-    }
-
-    /// Re-tops-up the rolling batch of affirmation notifications on each launch.
-    private func refreshAffirmations() {
-        let d = UserDefaults.standard
-        guard d.bool(forKey: "mg.affirmEnabled") else {
-            NotificationService.shared.scheduleAffirmations(enabled: false, wakeMinutes: 0, offsetHours: 0, timesPerDay: 1, customText: "")
-            return
-        }
-        let wake = d.object(forKey: "mg.affirmWakeMinutes") as? Int ?? 420
-        let offset = d.object(forKey: "mg.affirmOffsetHours") as? Int ?? 2
-        let times = d.object(forKey: "mg.affirmTimesPerDay") as? Int ?? 1
-        let useCustom = d.bool(forKey: "mg.affirmUseCustom")
-        let custom = useCustom ? (d.string(forKey: "mg.affirmCustom") ?? "") : ""
-        let alsoPrebuilt = useCustom && d.bool(forKey: "mg.affirmAlsoPrebuilt")
-        NotificationService.shared.scheduleAffirmations(enabled: true, wakeMinutes: wake, offsetHours: offset, timesPerDay: times, customText: custom, alsoIncludePrebuilt: alsoPrebuilt)
     }
 
     /// Clears any audio session left active by a prior crash/force-quit so the

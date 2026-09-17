@@ -42,8 +42,8 @@ struct MorningEntry: TimelineEntry {
     let guardEnd: Date?
     let streak: Int
     let best: Int
-    let routineDone: Int
-    let routineTotal: Int
+    let tasksDone: Int
+    let tasksTotal: Int
 
     /// Active for display: an "active" flag with an expired end time means the
     /// guard already lifted while nothing refreshed us — show resting.
@@ -55,7 +55,7 @@ struct MorningEntry: TimelineEntry {
 
     static let sample = MorningEntry(date: .now, isGuardActive: true,
                                      guardEnd: .now.addingTimeInterval(32 * 60),
-                                     streak: 5, best: 12, routineDone: 3, routineTotal: 6)
+                                     streak: 5, best: 12, tasksDone: 1, tasksTotal: 2)
 }
 
 struct MorningProvider: TimelineProvider {
@@ -72,7 +72,7 @@ struct MorningProvider: TimelineProvider {
         if entry.showsActive, let end = entry.guardEnd, end > entry.date {
             let resting = MorningEntry(date: end, isGuardActive: false, guardEnd: nil,
                                        streak: entry.streak, best: entry.best,
-                                       routineDone: entry.routineDone, routineTotal: entry.routineTotal)
+                                       tasksDone: entry.tasksDone, tasksTotal: entry.tasksTotal)
             completion(Timeline(entries: [entry, resting], policy: .after(end.addingTimeInterval(5))))
         } else {
             completion(Timeline(entries: [entry], policy: .after(entry.date.addingTimeInterval(30 * 60))))
@@ -87,8 +87,8 @@ struct MorningProvider: TimelineProvider {
             guardEnd: d?.object(forKey: "guardEndTime") as? Date,
             streak: StreakLedger.displayStreak(d),
             best: StreakLedger.best(d),
-            routineDone: d?.integer(forKey: "mg.routineDoneCount") ?? 0,
-            routineTotal: d?.integer(forKey: "mg.routineTotalCount") ?? 0
+            tasksDone: (d?.stringArray(forKey: "mg.tasks.done") ?? []).count,
+            tasksTotal: 2
         )
     }
 }
@@ -188,8 +188,8 @@ struct GuardWidgetView: View {
                 Text("Guard resting")
                     .font(.caption.weight(.semibold))
                     .foregroundStyle(Color.wPrimary)
-                if entry.routineTotal > 0 {
-                    Text("Routine \(entry.routineDone) of \(entry.routineTotal)")
+                if entry.tasksTotal > 0 {
+                    Text("Water & light \(entry.tasksDone) of \(entry.tasksTotal)")
                         .font(.caption2)
                         .foregroundStyle(Color.wSecondary)
                 }
@@ -224,8 +224,8 @@ struct GuardWidgetView: View {
                     Text("Guard resting")
                         .font(.subheadline.weight(.semibold))
                         .foregroundStyle(Color.wPrimary)
-                    if entry.routineTotal > 0 {
-                        Text("Routine \(entry.routineDone) of \(entry.routineTotal)")
+                    if entry.tasksTotal > 0 {
+                        Text("Water & light \(entry.tasksDone) of \(entry.tasksTotal)")
                             .font(.caption)
                             .foregroundStyle(Color.wSecondary)
                     }

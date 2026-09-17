@@ -4,8 +4,8 @@ import Foundation
 /// extension, and the widgets. All state lives in the App Group so every
 /// process sees the same numbers.
 ///
-/// A day is credited when the morning "happened": the guard ran (any start
-/// path) or the routine was fully completed. Crediting is idempotent per day.
+/// A day is credited when the guard ran, by any start path. Crediting is
+/// idempotent per day.
 enum StreakLedger {
 
     static let suiteName = "group.com.alexliu.morningguard"

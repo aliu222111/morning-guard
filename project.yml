@@ -148,9 +148,7 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: com.alex.MorningGuard
         PRODUCT_NAME: "$(TARGET_NAME)"
         ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS: NO
-        INFOPLIST_KEY_NSCameraUsageDescription: "Morning Guard uses the camera to measure ambient light levels for your morning sunlight routine."
-        INFOPLIST_KEY_NSMicrophoneUsageDescription: "Morning Guard uses the microphone to let you dictate your journal entries by voice."
-        INFOPLIST_KEY_NSSpeechRecognitionUsageDescription: "Morning Guard uses speech recognition to transcribe your voice into journal text."
+        INFOPLIST_KEY_NSCameraUsageDescription: "Morning Guard uses the camera to measure how much light you are getting in the morning."
         INFOPLIST_KEY_NSLocationWhenInUseUsageDescription: "Morning Guard uses your location to show your local weather."
         INFOPLIST_KEY_NSMotionUsageDescription: "Morning Guard uses motion data to detect which way your phone is facing so the correct camera can measure light levels."
         INFOPLIST_KEY_ITSAppUsesNonExemptEncryption: NO

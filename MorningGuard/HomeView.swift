@@ -70,12 +70,10 @@ struct WakeUpAnimation: View {
 
 struct HomeView: View {
     @EnvironmentObject var guardVM: GuardViewModel
-    @StateObject private var routineStore = RoutineStore.shared
+    @ObservedObject private var tasks = MorningTasks.shared
     @StateObject private var weather = WeatherService()
 
     @State private var formattedDate: String = Date().formatted(date: .complete, time: .omitted)
-    @State private var showGuidedRoutine = false
-    @State private var showCustomize = false
     @State private var streak = 0
 
     private var greeting: String {
@@ -113,14 +111,6 @@ struct HomeView: View {
                                         .minimumScaleFactor(0.7)
                                 }
                                 Spacer(minLength: 8)
-                                Button { showCustomize = true } label: {
-                                    Image(systemName: "slider.horizontal.3")
-                                        .font(.subheadline.weight(.semibold))
-                                        .foregroundStyle(Color("Sunrise"))
-                                        .frame(width: 44, height: 44)
-                                        .background(Color.appCardFill, in: Circle())
-                                }
-                                .accessibilityLabel("Customize routine")
                             }
 
                             // Streak + weather live on their own row so they don't
@@ -142,12 +132,14 @@ struct HomeView: View {
                         WakeUpAnimation()
                             .padding(.horizontal)
 
-                        // Hero — Start Morning Routine
-                        RoutineHeroCard(store: routineStore) { showGuidedRoutine = true }
+                        // The block leads: it is the whole point of the app.
+                        GuardStatusCard()
                             .padding(.horizontal)
 
-                        // Guard status
-                        GuardStatusCard()
+                        WaterCard(tasks: tasks)
+                            .padding(.horizontal)
+
+                        LightCard(tasks: tasks)
                             .padding(.horizontal)
 
                         // Coffee timer (only after the guard has run today)
@@ -177,17 +169,11 @@ struct HomeView: View {
                 refreshStreak()   // day rolled over — a stale streak may have expired
             }
             .onAppear {
-                routineStore.resetIfNewDay()
+                tasks.resetIfNewDay()
                 refreshStreak()
             }
             .onChange(of: guardVM.isGuardActive) { _, _ in refreshStreak() }
             .task { weather.refresh() }
-            .fullScreenCover(isPresented: $showGuidedRoutine, onDismiss: refreshStreak) {
-                GuidedRoutineView(store: routineStore)
-            }
-            .sheet(isPresented: $showCustomize) {
-                CustomizeRoutineView(store: routineStore)
-            }
         }
     }
 
@@ -222,66 +208,6 @@ struct StreakChip: View {
             )
             .accessibilityLabel("\(streak) day streak")
         }
-    }
-}
-
-// MARK: - Routine Hero Card
-
-struct RoutineHeroCard: View {
-    @ObservedObject var store: RoutineStore
-    let start: () -> Void
-
-    private var allDone: Bool { store.allDone }
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            HStack {
-                VStack(alignment: .leading, spacing: 4) {
-                    Text("Morning Routine")
-                        .font(.caption.weight(.semibold))
-                        .foregroundStyle(Color.secondaryText)
-                        .tracking(1.2)
-                        .textCase(.uppercase)
-                    Text(allDone ? "All done for today" : "\(store.doneCount) of \(store.totalCount) done")
-                        .font(.mg("Raleway-SemiBold", 24))
-                        .foregroundStyle(Color.appPrimaryText)
-                }
-                Spacer()
-                ZStack {
-                    Circle()
-                        .stroke(Color("Sunrise").opacity(0.15), lineWidth: 6)
-                    Circle()
-                        .trim(from: 0, to: store.progress)
-                        .stroke(Color("Sunrise"), style: StrokeStyle(lineWidth: 6, lineCap: .round))
-                        .rotationEffect(.degrees(-90))
-                    Image(systemName: "sun.max.fill")
-                        .font(.system(size: 18, weight: .semibold))
-                        // A risen, yellowish-white sun once the routine is complete.
-                        .foregroundStyle(allDone ? Color(red: 1.0, green: 0.96, blue: 0.78) : Color("Sunrise"))
-                        .shadow(color: allDone ? Color(red: 1.0, green: 0.9, blue: 0.5).opacity(0.8) : .clear, radius: 6)
-                }
-                .frame(width: 54, height: 54)
-                .animation(.easeInOut, value: store.progress)
-            }
-
-            Button(action: start) {
-                Label(allDone ? "Review routine" : (store.doneCount > 0 ? "Continue routine" : "Start morning routine"),
-                      systemImage: "play.fill")
-                    .font(.subheadline.weight(.semibold))
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 14)
-                    .background(Color("Sunrise"))
-                    .foregroundStyle(.white)
-                    .clipShape(RoundedRectangle(cornerRadius: 14))
-            }
-        }
-        .padding(20)
-        .background(
-            RoundedRectangle(cornerRadius: 22)
-                .fill(Color.appCardFill)
-                .shadow(color: .black.opacity(0.07), radius: 10, x: 0, y: 3)
-                .compositingGroup()
-        )
     }
 }
 

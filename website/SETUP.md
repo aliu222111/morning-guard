@@ -15,18 +15,25 @@
 
 ---
 
-## Step 1 — Drop in your real App Store ID
+## Step 1 - Turn on the download buttons
 
-Every "Download" button currently points to the placeholder `[YOUR-APP-ID]`. Until you replace it, the buttons go nowhere.
+The site currently says "Coming soon" wherever a download button would go, because the
+app is not live yet. The App Store record is reserved as app ID `6793297906`.
 
-1. In **App Store Connect → your app → App Information**, copy the **Apple ID** (a 10-digit number).
-2. Find and replace **`[YOUR-APP-ID]`** with that number across the whole `website/` folder. It appears in:
-   - `index.html` (nav button, hero button, bottom button)
-   - `privacy.html` (nav button)
-   - `support.html` (nav button)
-3. The finished link looks like `https://apps.apple.com/app/id1234567890`.
+When the app is approved, swap each `<span class="nav-cta nav-cta--pending">Coming soon</span>`
+for a real link:
 
-Also update the app itself: in `MorningGuard/MorningGuard/SettingsView.swift`, replace `appStoreID = "0000000000"` with the same number so the in-app "Rate" button works.
+```html
+<a class="nav-cta" href="https://apps.apple.com/app/id6793297906" target="_blank" rel="noopener">Download Free</a>
+```
+
+It appears once each in `index.html`, `privacy.html` and `support.html`. The hero badge in
+`index.html` ("Coming soon to iPhone") and the line above the footer both need the same
+treatment.
+
+The app itself is already pointed at that ID: `appStoreID` in
+`MorningGuard/SettingsView.swift` is set to `6793297906`, so the in-app "Rate" button will
+work as soon as the listing is live.
 
 ---
 

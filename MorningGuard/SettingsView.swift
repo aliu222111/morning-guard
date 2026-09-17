@@ -60,32 +60,6 @@ struct SettingsView: View {
                     }
                     .listRowBackground(Color.appCardFill.opacity(0.7))
 
-                    // Notifications section
-                    Section {
-                        NavigationLink {
-                            AffirmationsView()
-                        } label: {
-                            HStack {
-                                SettingsIcon(name: "sparkles", color: Color("Sunrise"))
-                                VStack(alignment: .leading, spacing: 2) {
-                                    Text("Daily affirmation")
-                                        .font(.subheadline.weight(.medium))
-                                        .foregroundStyle(Color.appPrimaryText)
-                                    Text("A positive note, hours after you wake")
-                                        .font(.caption)
-                                        .foregroundStyle(Color.secondaryText)
-                                }
-                            }
-                        }
-                    } header: {
-                        Text("Notifications")
-                            .font(.caption.weight(.semibold))
-                            .foregroundStyle(Color.secondaryText)
-                            .tracking(1.2)
-                            .textCase(.uppercase)
-                    }
-                    .listRowBackground(Color.appCardFill.opacity(0.7))
-
                     // Privacy section
                     Section {
                         NavigationLink {
@@ -221,7 +195,6 @@ struct PrivacyView: View {
         Item(icon: "hourglass", permission: "Screen Time", feature: "Blocks the apps you choose during your morning window. Handled entirely by Apple's on-device Screen Time."),
         Item(icon: "bell.badge.fill", permission: "Notifications", feature: "Sends your halfway and completion reminders."),
         Item(icon: "camera.fill", permission: "Camera", feature: "Measures ambient light for the morning light step. No photo or video is captured or saved."),
-        Item(icon: "mic.fill", permission: "Microphone", feature: "Lets you dictate journal entries by voice."),
         Item(icon: "waveform", permission: "Speech Recognition", feature: "Turns your dictation into text, on-device."),
         Item(icon: "gyroscope", permission: "Motion", feature: "Detects which way the phone faces so the right camera measures light."),
         Item(icon: "location.fill", permission: "Location", feature: "Used only to look up your local weather.")
@@ -241,7 +214,7 @@ struct PrivacyView: View {
                         Text("Everything stays on your device")
                             .font(.mg("Raleway-SemiBold", 22))
                             .foregroundStyle(Color.appPrimaryText)
-                        Text("Morning Guard has no account, no servers, and no analytics. Your routine, journal, and app selections are stored only on this iPhone and are never uploaded or shared.")
+                        Text("Morning Guard has no account, no servers, and no analytics. Your app selections and your morning progress are stored only on this iPhone and are never uploaded or shared.")
                             .font(.mg("Lora-Regular", 15))
                             .foregroundStyle(Color.secondaryText)
                     }

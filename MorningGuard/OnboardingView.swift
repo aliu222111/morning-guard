@@ -8,7 +8,7 @@ struct OnboardingView: View {
     @State private var isAuthorizing = false
     @State private var showDeniedAlert = false
 
-    private let totalPages = 4
+    private let totalPages = 3
 
     var body: some View {
         ZStack {
@@ -31,23 +31,16 @@ struct OnboardingView: View {
                     OnboardPage(
                         emoji: "☀️",
                         doodle: "doodle-onboard-2",
-                        title: "A guided routine,\none step at a time.",
-                        bodyText: "Walk through water, movement, morning light, breathing, and journaling in the order you choose.",
+                        title: "Water and daylight,\nnothing else.",
+                        bodyText: "Two things worth doing before the day starts. Drink a glass of water, and get some real light on your face.",
                         tag: 1
-                    )
-                    OnboardPage(
-                        emoji: "✨",
-                        doodle: "doodle-onboard-3",
-                        title: "Affirmations and\ndaily reflection.",
-                        bodyText: "Get a fresh journal prompt every morning and a positive affirmation sent whenever you need it.",
-                        tag: 2
                     )
                     OnboardPage(
                         emoji: "🔒",
                         doodle: "doodle-onboard-4",
                         title: "It lifts\nautomatically.",
                         bodyText: "When your morning window ends, the guard lifts on its own. We'll notify you halfway through and when it's done.",
-                        tag: 3
+                        tag: 2
                     )
                 }
                 .tabViewStyle(.page(indexDisplayMode: .always))
@@ -109,13 +102,13 @@ struct OnboardingView: View {
                             Text("Morning Guard needs Screen Time access to block apps. Enable it in Settings and Screen Time.")
                         }
 
-                        // App-blocking is only one part of the app — the routine,
-                        // journal, and breathing work without Screen Time access.
+                        // Without Screen Time access the block cannot run, but the
+                        // water and light steps still work, so let them in anyway.
                         Button {
                             NotificationService.shared.requestPermission()
                             appState.hasCompletedOnboarding = true
                         } label: {
-                            Text("Not now — explore first")
+                            Text("Not now, explore first")
                                 .font(.subheadline)
                                 .foregroundStyle(Color.secondaryText)
                         }
