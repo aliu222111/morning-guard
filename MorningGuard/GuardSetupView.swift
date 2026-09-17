@@ -85,6 +85,25 @@ struct DurationCard: View {
             .font(.caption2)
             .foregroundStyle(Color.secondaryText)
 
+            #if DEBUG
+            // Filming the shield needs a window that starts and ends while the
+            // camera is rolling. A one-minute morning block is useless in real
+            // life, so this stays out of release builds.
+            Button {
+                guardVM.windowDurationMinutes = 1
+                guardVM.startMorningGuard()
+            } label: {
+                Label("Start a 1 minute block (debug)", systemImage: "record.circle")
+                    .font(.caption.weight(.medium))
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 8)
+                    .background(Color.secondary.opacity(0.12))
+                    .foregroundStyle(Color.secondaryText)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+            }
+            .disabled(guardVM.isGuardActive)
+            #endif
+
             Divider().opacity(0.35)
 
             HStack {
