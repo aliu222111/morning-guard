@@ -660,10 +660,7 @@ footer {
   .hero-phones { display: block; margin-top: -16px; }
 }
 
-/* ─── BLOCKING DEMO ────────────────────────────────────────── */
-/* An 8s loop showing what the block actually does: you reach for a
-   distracting app, it starts to open, the shield takes over. Pure SVG + CSS
-   so it stays sharp at any size and ships as a few KB of markup. */
+/* ─── APP RECORDING ───────────────────────────────────────── */
 
 .demo {
   padding: 56px 24px 8px;
@@ -673,78 +670,23 @@ footer {
   gap: 20px;
 }
 
-.demo-frame {
+/* The recording already contains the device bezel, so the frame here is just a
+   rounded clip plus a shadow to lift it off the cream background. */
+.demo-video {
   width: 100%;
   max-width: 300px;
   height: auto;
-  filter: drop-shadow(0 22px 44px rgba(28, 25, 23, 0.18));
+  display: block;
+  border-radius: 34px;
+  background: #1C1917;
+  box-shadow: 0 22px 44px rgba(28, 25, 23, 0.18);
 }
 
 .demo-caption {
   font-size: 0.85rem;
   color: var(--text-sec);
   text-align: center;
-  max-width: 34ch;
-}
-
-/* The tapping finger drifts up to the app icon, presses, and leaves. */
-.mg-finger { animation: mg-finger 8s ease-in-out infinite; transform-origin: center; }
-@keyframes mg-finger {
-  0%             { opacity: 0; transform: translate(60px, 300px) scale(1); }
-  8%             { opacity: 0.9; transform: translate(10px, 120px) scale(1); }
-  19%            { opacity: 0.9; transform: translate(0, 0) scale(1); }
-  22%            { opacity: 0.9; transform: translate(0, 0) scale(0.82); }
-  26%            { opacity: 0.9; transform: translate(0, 0) scale(1); }
-  33%, 100%      { opacity: 0; transform: translate(0, -30px) scale(1); }
-}
-
-/* The icon the finger hit swells as though the app were launching, then is
-   covered before it ever gets there. */
-.mg-launch { animation: mg-launch 8s ease-in-out infinite; transform-origin: 64px 274px; }
-@keyframes mg-launch {
-  0%, 24%   { transform: scale(1); opacity: 1; }
-  36%       { transform: scale(4.2); opacity: 1; }
-  50%, 100% { transform: scale(4.2); opacity: 1; }
-}
-
-/* The shield slides up over the launching app and holds. */
-.mg-shield { animation: mg-shield 8s ease-in-out infinite; }
-@keyframes mg-shield {
-  0%, 33%    { transform: translateY(560px); }
-  48%        { transform: translateY(0); }
-  88%        { transform: translateY(0); }
-  96%, 100%  { transform: translateY(560px); }
-}
-
-/* Home screen dims as the shield arrives so the shield reads as "on top". */
-.mg-home { animation: mg-home 8s ease-in-out infinite; }
-@keyframes mg-home {
-  0%, 36%   { opacity: 1; }
-  50%, 88%  { opacity: 0.25; }
-  97%, 100% { opacity: 1; }
-}
-
-/* Four discrete ticks, each holding its slot, so the clock reads as running. */
-.mg-tick { opacity: 0; }
-.mg-tick-1 { animation: mg-tick-1 8s steps(1, end) infinite; }
-.mg-tick-2 { animation: mg-tick-2 8s steps(1, end) infinite; }
-.mg-tick-3 { animation: mg-tick-3 8s steps(1, end) infinite; }
-.mg-tick-4 { animation: mg-tick-4 8s steps(1, end) infinite; }
-@keyframes mg-tick-1 { 0%, 49% { opacity: 0; } 50%, 58% { opacity: 1; } 59%, 100% { opacity: 0; } }
-@keyframes mg-tick-2 { 0%, 58% { opacity: 0; } 59%, 67% { opacity: 1; } 68%, 100% { opacity: 0; } }
-@keyframes mg-tick-3 { 0%, 67% { opacity: 0; } 68%, 76% { opacity: 1; } 77%, 100% { opacity: 0; } }
-@keyframes mg-tick-4 { 0%, 76% { opacity: 0; } 77%, 92% { opacity: 1; } 93%, 100% { opacity: 0; } }
-
-/* Anyone who has asked for less motion gets the punchline as a still: the
-   shield up, the clock showing, nothing moving. */
-@media (prefers-reduced-motion: reduce) {
-  .mg-finger { display: none; }
-  .mg-launch, .mg-shield, .mg-home, .mg-tick-1,
-  .mg-tick-2, .mg-tick-3, .mg-tick-4 { animation: none; }
-  .mg-launch { transform: scale(4.2); }
-  .mg-shield { transform: translateY(0); }
-  .mg-home   { opacity: 0.25; }
-  .mg-tick-1 { opacity: 1; }
+  max-width: 38ch;
 }
 
 /* The store listing is not live yet, so the nav slot states that plainly

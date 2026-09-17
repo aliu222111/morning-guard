@@ -11,6 +11,7 @@
 		05062A2A8D5156F3DB08EF7E /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DA12FB55C3614D68432B08C /* Raleway-Medium.ttf */; };
 		061160A23C6D9C34A9A26244 /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50DC86C7F1E9546E9949CBD /* ManagedSettings.framework */; };
 		0691DABC46A645CE32071804 /* Color+MorningGuard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46C240DE4D283974FD57A27 /* Color+MorningGuard.swift */; };
+		0A270EFF060AE90EDC4EB6CC /* DemoWalkthrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A995B6D6479881CD65CD700 /* DemoWalkthrough.swift */; };
 		0D36986215691FA6A6B8606F /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50DC86C7F1E9546E9949CBD /* ManagedSettings.framework */; };
 		0DC5AF478E79DFF4302D4703 /* Lora-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A0C28D8AB27BA97B79C5142D /* Lora-Regular.ttf */; };
 		1D7ABE88E3D55218B558AF44 /* ManagedSettingsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8A456134914D12B205E142 /* ManagedSettingsUI.framework */; };
@@ -126,6 +127,7 @@
 		564991B79F2BFB0B93DB6438 /* MorningGuardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningGuardUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		58F8D3285385626C6BAF84B7 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		59FD70315506D0C813B67CFF /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		6A995B6D6479881CD65CD700 /* DemoWalkthrough.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoWalkthrough.swift; sourceTree = "<group>"; };
 		7B8A456134914D12B205E142 /* ManagedSettingsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManagedSettingsUI.framework; path = System/Library/Frameworks/ManagedSettingsUI.framework; sourceTree = SDKROOT; };
 		81502069F1164865AFD0D82F /* MorningTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningTasks.swift; sourceTree = "<group>"; };
 		8AF6E1B1BFE23A7F394439DF /* FamilyControls.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FamilyControls.framework; path = System/Library/Frameworks/FamilyControls.framework; sourceTree = SDKROOT; };
@@ -310,6 +312,7 @@
 		BD9F1A03351E0AD73DEB86DB /* MorningGuardUITests */ = {
 			isa = PBXGroup;
 			children = (
+				6A995B6D6479881CD65CD700 /* DemoWalkthrough.swift */,
 				14BB55BDAAD9F1749580CAD8 /* MorningGuardUITests.swift */,
 				564991B79F2BFB0B93DB6438 /* MorningGuardUITestsLaunchTests.swift */,
 			);
@@ -597,6 +600,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A270EFF060AE90EDC4EB6CC /* DemoWalkthrough.swift in Sources */,
 				3DFCBBB321B80A35CB84D7A0 /* MorningGuardUITests.swift in Sources */,
 				EC51F0002B196B8FA7D92B0F /* MorningGuardUITestsLaunchTests.swift in Sources */,
 			);
