@@ -856,13 +856,13 @@ footer {
 
 /* Prose gets a real measure. Long lines are the main thing that made the
    copy feel unconsidered at desktop widths. */
-.hero-sub, .demo-caption, .privacy-inner p, .step p, .feature-card p {
+.hero-sub, .demo-caption, .privacy-inner p {
   max-width: min(100%, var(--measure));
   line-height: 1.6;          /* unitless, so user text-spacing overrides work */
   height: auto;
 }
 
-.hero-sub, .demo-caption, .gallery-hint { margin-inline: auto; }
+.hero-sub, .demo-caption, .gallery-hint, .privacy-inner p { margin-inline: auto; }
 
 /* Interactive things should say so. */
 a, .nav-cta, .feature-card, .shot img { transition: all .22s var(--ease); }
@@ -888,17 +888,6 @@ a:focus-visible, button:focus-visible, video:focus-visible, .gallery-strip:focus
 }
 
 /* Nav now holds a link next to the status chip. */
-.nav-right { display: flex; align-items: center; gap: 18px; }
-
-.nav-link {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--text-sec);
-  text-decoration: none;
-}
-
-.nav-link:hover { color: var(--sunrise); }
-
 .gallery { max-width: 1100px; margin: 0 auto; padding: var(--section-y) var(--gutter); text-align: center; }
 
 /* 65ch is right for body copy but too wide for the hero, where the type is
