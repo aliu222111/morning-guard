@@ -743,10 +743,10 @@ footer {
 /* The shield slides up over the launching app and holds. */
 .mg-shield { animation: mg-shield 8s ease-in-out infinite; }
 @keyframes mg-shield {
-  0%, 33%    { transform: translateY(560px); }
+  0%, 33%    { transform: translateY(640px); }
   48%        { transform: translateY(0); }
   88%        { transform: translateY(0); }
-  96%, 100%  { transform: translateY(560px); }
+  96%, 100%  { transform: translateY(640px); }
 }
 
 /* Home screen dims as the shield arrives so the shield reads as "on top". */
