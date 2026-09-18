@@ -22,3 +22,6 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+
+# Wrangler local state and cache
+.wrangler/

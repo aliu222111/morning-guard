@@ -24,6 +24,7 @@
 		480BCBC49CEC6A9C76C9C2E5 /* StreakLedger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DA05AC9111142759A077F7 /* StreakLedger.swift */; };
 		49EA12DD1BA0510ED324B6BC /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 58F8D3285385626C6BAF84B7 /* PrivacyInfo.xcprivacy */; };
 		4F29CB96FA079DB4EC8E545D /* MorningTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81502069F1164865AFD0D82F /* MorningTasks.swift */; };
+		4FFAACA25904C772EA0850C6 /* ScreenshotTour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C4FFE48E55CE5124396C44 /* ScreenshotTour.swift */; };
 		5013F0B65671A019D28D5B1C /* FamilyControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF6E1B1BFE23A7F394439DF /* FamilyControls.framework */; };
 		53D4794DC6E1A0499F0DD0F7 /* ShieldConfigurationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F156255642C7F308A2003046 /* ShieldConfigurationExtension.swift */; };
 		612ECFC37AC7890F1ADF7A82 /* MorningGuardWidgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8E3562E777D43F52930332F7 /* MorningGuardWidgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -112,6 +113,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		03C4FFE48E55CE5124396C44 /* ScreenshotTour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotTour.swift; sourceTree = "<group>"; };
 		04898C4083FA5C816DF9016B /* MorningGuardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningGuardTests.swift; sourceTree = "<group>"; };
 		0F897184C8B39DCBF7B2E4D1 /* MorningGuardWidgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningGuardWidgets.swift; sourceTree = "<group>"; };
 		13F90B805445AC5BD8410064 /* GuardSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardSetupView.swift; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 				6A995B6D6479881CD65CD700 /* DemoWalkthrough.swift */,
 				14BB55BDAAD9F1749580CAD8 /* MorningGuardUITests.swift */,
 				564991B79F2BFB0B93DB6438 /* MorningGuardUITestsLaunchTests.swift */,
+				03C4FFE48E55CE5124396C44 /* ScreenshotTour.swift */,
 			);
 			path = MorningGuardUITests;
 			sourceTree = "<group>";
@@ -603,6 +606,7 @@
 				0A270EFF060AE90EDC4EB6CC /* DemoWalkthrough.swift in Sources */,
 				3DFCBBB321B80A35CB84D7A0 /* MorningGuardUITests.swift in Sources */,
 				EC51F0002B196B8FA7D92B0F /* MorningGuardUITestsLaunchTests.swift in Sources */,
+				4FFAACA25904C772EA0850C6 /* ScreenshotTour.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

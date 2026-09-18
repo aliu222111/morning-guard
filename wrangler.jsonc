@@ -1,0 +1,14 @@
+{
+  // morningguard.com is served by this Worker, which the DNS zone points at via
+  // a Worker record on the apex. It was originally uploaded by hand from the
+  // dashboard; this file exists so redeploys are reproducible.
+  //
+  //   npx wrangler deploy
+  //
+  // Assets-only: there is no script, just the static site in website/.
+  "name": "morningguardapp",
+  "compatibility_date": "2026-07-22",
+  "assets": {
+    "directory": "./website"
+  }
+}

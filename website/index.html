@@ -33,7 +33,10 @@
         </svg>
         MorningGuard
       </a>
-      <span class="nav-cta nav-cta--pending">Coming soon</span>
+      <div class="nav-right">
+        <a class="nav-link" href="#screens">Screens</a>
+        <span class="nav-cta nav-cta--pending">Coming soon</span>
+      </div>
     </div>
   </nav>
 
@@ -133,10 +136,9 @@
       </figure>
 
       <figure class="demo-item">
-        <video class="demo-video" autoplay loop muted playsinline
+        <video class="demo-video" autoplay loop muted playsinline preload="metadata"
                poster="app-tour-poster.jpg"
                aria-label="Screen recording of Morning Guard: the home screen with the block card and the water and light tasks, then the Guard tab where block duration and blocked apps are set.">
-          <source src="app-tour.webm" type="video/webm" />
           <source src="app-tour.mp4" type="video/mp4" />
         </video>
         <figcaption class="demo-caption">
@@ -145,6 +147,51 @@
         </figcaption>
       </figure>
 
+    </div>
+  </section>
+
+  <!-- SCREENSHOTS -->
+  <section class="gallery" id="screens">
+    <div class="section-label">Screens</div>
+    <h2>Every screen there is.</h2>
+    <p class="gallery-hint">Seven of them. That is the whole app.</p>
+
+    <div class="gallery-strip" tabindex="0" role="group" aria-label="App screenshots, scrollable">
+        <figure class="shot">
+          <img src="shots/home.jpg" width="600" height="1304" loading="lazy" decoding="async"
+               alt="The block leads. Water and light sit under it." />
+          <figcaption>The block leads. Water and light sit under it.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="shots/water.jpg" width="600" height="1304" loading="lazy" decoding="async"
+               alt="Tasks tick off and reset overnight." />
+          <figcaption>Tasks tick off and reset overnight.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="shots/light.jpg" width="600" height="1304" loading="lazy" decoding="async"
+               alt="The light step measures with the camera." />
+          <figcaption>The light step measures with the camera.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="shots/guard.jpg" width="600" height="1304" loading="lazy" decoding="async"
+               alt="Set the window length, 15 minutes to 2 hours." />
+          <figcaption>Set the window length, 15 minutes to 2 hours.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="shots/schedule.jpg" width="600" height="1304" loading="lazy" decoding="async"
+               alt="Pick the apps, or let it arm itself at wake time." />
+          <figcaption>Pick the apps, or let it arm itself at wake time.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="shots/onboard.jpg" width="600" height="1304" loading="lazy" decoding="async"
+               alt="Setup is one pass and about a minute." />
+          <figcaption>Setup is one pass and about a minute.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="shots/lifts.jpg" width="600" height="1304" loading="lazy" decoding="async"
+               alt="It lifts on its own when the window ends." />
+          <figcaption>It lifts on its own when the window ends.</figcaption>
+        </figure>
     </div>
   </section>
 

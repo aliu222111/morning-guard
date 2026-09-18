@@ -15,7 +15,18 @@
   --border:     #E7E5E4;
   --radius:     18px;
   --radius-sm:  12px;
+
+  /* One vertical rhythm for every section, so the page scans evenly instead of
+     drifting between 80px and 100px per band. */
+  --section-y:  104px;
+  --gutter:     24px;
+  --measure:    65ch;
+  --ease:       cubic-bezier(.22, .61, .36, 1);
   font-size: 16px;
+}
+
+@media (max-width: 640px) {
+  :root { --section-y: 72px; }
 }
 
 html { scroll-behavior: smooth; }
@@ -82,7 +93,7 @@ nav {
 .hero {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 80px 24px 60px;
+  padding: var(--section-y) var(--gutter);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -294,7 +305,7 @@ nav {
 .how {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 100px 24px;
+  padding: var(--section-y) var(--gutter);
   text-align: center;
 }
 
@@ -358,7 +369,7 @@ nav {
 .features {
   background: var(--text);
   color: #fff;
-  padding: 100px 24px;
+  padding: var(--section-y) var(--gutter);
   text-align: center;
 }
 
@@ -423,7 +434,7 @@ nav {
   background: var(--sunrise-lt);
   border-top: 1px solid var(--sunrise-md);
   border-bottom: 1px solid var(--sunrise-md);
-  padding: 80px 24px;
+  padding: var(--section-y) var(--gutter);
   text-align: center;
 }
 
@@ -463,7 +474,7 @@ nav {
 
 .bottom-cta {
   background: linear-gradient(135deg, #431407 0%, #7C2D12 100%);
-  padding: 100px 24px;
+  padding: var(--section-y) var(--gutter);
   text-align: center;
   color: #fff;
 }
@@ -664,7 +675,7 @@ footer {
 /* Left: an SVG illustration of the block, which cannot be filmed. Right: a real
    recording of the app. They sit side by side once there is room. */
 
-.demo { padding: 56px 24px 8px; }
+.demo { padding: calc(var(--section-y) * 0.55) var(--gutter) 8px; }
 
 .demo-row {
   display: flex;
@@ -781,3 +792,115 @@ footer {
 /* Four cards in an auto-fit grid land 3 + 1, which reads as a mistake. Cap the
    track count so they sit 2 x 2 once there is room for it. */
 .feature-grid { max-width: 760px; }
+
+/* ─── SCREENSHOT GALLERY ───────────────────────────────────── */
+/* A scroll strip rather than a grid: seven tall phone shots in a grid would
+   either shrink to illegibility or push everything else off the page. Scrolls
+   inside its own container so the page body never scrolls sideways. */
+
+.gallery-strip {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 8px var(--gutter) 28px;
+  margin-inline: calc(var(--gutter) * -1);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.gallery-strip::-webkit-scrollbar { height: 8px; }
+.gallery-strip::-webkit-scrollbar-thumb {
+  background: var(--sunrise-md);
+  border-radius: 4px;
+}
+
+.shot {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  margin: 0;
+  width: 208px;
+}
+
+.shot img {
+  display: block;
+  width: 100%;
+  height: auto;              /* never a fixed height: the image sets its own */
+  border-radius: 26px;
+  background: #1C1917;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 28px rgba(28, 25, 23, 0.12);
+  transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+}
+
+.shot:hover img {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 38px rgba(28, 25, 23, 0.18);
+}
+
+.shot figcaption {
+  margin-top: 12px;
+  font-size: 0.8rem;
+  color: var(--text-sec);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.gallery-hint {
+  font-size: 0.8rem;
+  color: var(--text-sec);
+  text-align: center;
+}
+
+/* ─── POLISH PASS ──────────────────────────────────────────── */
+
+/* Prose gets a real measure. Long lines are the main thing that made the
+   copy feel unconsidered at desktop widths. */
+.hero-sub, .demo-caption, .privacy-inner p, .step p, .feature-card p {
+  max-width: min(100%, var(--measure));
+  line-height: 1.6;          /* unitless, so user text-spacing overrides work */
+  height: auto;
+}
+
+.hero-sub, .demo-caption, .gallery-hint { margin-inline: auto; }
+
+/* Interactive things should say so. */
+a, .nav-cta, .feature-card, .shot img { transition: all .22s var(--ease); }
+
+.feature-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--sunrise-md);
+}
+
+.footer-links a:hover, .privacy-link:hover { color: var(--sunrise); }
+
+/* Visible focus for keyboard users, which the original stripped to nothing. */
+a:focus-visible, button:focus-visible, video:focus-visible, .gallery-strip:focus-visible {
+  outline: 2px solid var(--sunrise);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a, .nav-cta, .feature-card, .shot img { transition: none; }
+  .shot:hover img, .feature-card:hover { transform: none; }
+  .gallery-strip { scroll-snap-type: none; }
+}
+
+/* Nav now holds a link next to the status chip. */
+.nav-right { display: flex; align-items: center; gap: 18px; }
+
+.nav-link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-sec);
+  text-decoration: none;
+}
+
+.nav-link:hover { color: var(--sunrise); }
+
+.gallery { max-width: 1100px; margin: 0 auto; padding: var(--section-y) var(--gutter); text-align: center; }
+
+/* 65ch is right for body copy but too wide for the hero, where the type is
+   large: the line gets hard to track. */
+.hero-sub { max-width: min(100%, 52ch); }
