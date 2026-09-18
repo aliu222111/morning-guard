@@ -904,3 +904,7 @@ a:focus-visible, button:focus-visible, video:focus-visible, .gallery-strip:focus
 /* 65ch is right for body copy but too wide for the hero, where the type is
    large: the line gets hard to track. */
 .hero-sub { max-width: min(100%, 52ch); }
+
+/* When autoplay is refused and the controls appear, give them room to sit
+   against the rounded frame instead of clipping into the corner radius. */
+.demo-video--manual { border-radius: 26px; }

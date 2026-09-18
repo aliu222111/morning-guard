@@ -136,9 +136,10 @@
       </figure>
 
       <figure class="demo-item">
-        <video class="demo-video" autoplay loop muted playsinline preload="metadata"
+        <video class="demo-video" autoplay loop muted playsinline preload="auto"
                poster="app-tour-poster.jpg"
                aria-label="Screen recording of Morning Guard: the home screen with the block card and the water and light tasks, then the Guard tab where block duration and blocked apps are set.">
+          <source src="app-tour.webm" type="video/webm" />
           <source src="app-tour.mp4" type="video/mp4" />
         </video>
         <figcaption class="demo-caption">
@@ -312,15 +313,35 @@
   </footer>
 
   <script>
-    // autoplay is set in the markup for everyone else; anyone who has asked for
-    // reduced motion gets a paused video with controls instead.
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      document.querySelectorAll('.demo-video').forEach(function (v) {
+    (function () {
+      var v = document.querySelector('.demo-video');
+      if (!v) return;
+
+      // Anyone who asked for reduced motion gets it paused with controls.
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         v.removeAttribute('autoplay');
         v.setAttribute('controls', '');
         v.pause();
-      });
-    }
+        return;
+      }
+
+      // Autoplay is refused in more places than people expect: Low Power Mode
+      // on iOS, data saver, some managed browsers. Rather than leave a poster
+      // that looks broken, give it a play control once we know it did not start.
+      function offerControls() {
+        if (v.currentTime > 0 && !v.paused) return;
+        v.setAttribute('controls', '');
+        v.classList.add('demo-video--manual');
+      }
+
+      var started = false;
+      v.addEventListener('playing', function () { started = true; }, { once: true });
+
+      var kick = v.play();
+      if (kick && typeof kick.catch === 'function') kick.catch(offerControls);
+
+      setTimeout(function () { if (!started) offerControls(); }, 3000);
+    })();
   </script>
 
 </body>
